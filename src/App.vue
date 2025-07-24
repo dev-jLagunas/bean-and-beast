@@ -1,4 +1,7 @@
 <script setup>
+// Components
+import TheMobileNavbar from './components/TheMobileNavbar.vue'
+// Images
 import flatLogo from '@/assets/images/mobile/flat-logo.svg'
 </script>
 
@@ -7,6 +10,24 @@ import flatLogo from '@/assets/images/mobile/flat-logo.svg'
   <figure>
     <img :src="flatLogo" width="700" height="200" alt="Bean and Beast logo" class="w-full" />
   </figure>
+  <main>
+    <router-view v-slot="{ Component }">
+      <transition name="page">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </main>
+  <TheMobileNavbar />
 </template>
 
-<style scoped></style>
+<style scoped>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 1s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+</style>

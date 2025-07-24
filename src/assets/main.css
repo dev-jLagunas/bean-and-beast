@@ -49,7 +49,20 @@ Tailwind Variables
 /***************************************
 Tailwind Custom Reusable Classes
 *****************************************/
+/* Flex & Grid */
+.flex-evenly-center {
+  @apply flex flex-row justify-evenly items-center;
+}
 
-.cart-btn {
-  @apply bg-dark-main text-2xl font-title text-light-main;
+/* Footer Nav */
+.footer-nav {
+  @apply fixed bottom-0 w-full;
+}
+
+.footer-nav-wrapper {
+  @apply py-3 bg-dark-main text-light-main;
+}
+
+.footer-icon {
+  @apply text-2xl;
 }
