@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-@import './custom.css';
-
 /***************************************
 Global Styles
 *****************************************/
@@ -17,4 +15,41 @@ Global Styles
 Tailwind Variables
 *****************************************/
 @theme {
+  /* FONTS */
+  --font-title: 'Fredoka', sans-serif;
+  --font-paragraph: 'Lato', sans-serif;
+
+  /* COLORS */
+  --color-dark-main: #333333;
+  --color-light-main: #f4f4f4;
+  /* PANDA */
+  --color-panda-orange: #f9c74f;
+  --color-panda-light: #fff7e2;
+  --color-panda-green: #4d908e;
+  --color-panda-blue: #a2c4e0;
+  /* ZEBRA */
+  --color-zebra-red: #ff5555;
+  --color-zebra-light: #ffecd1;
+  --color-zebra-cyan: #51bfc0;
+  /* COW */
+  --color-cow-blue: #418dc2;
+  --color-cow-red: #ff8484;
+  --color-cow-turquoise: #d6fff6;
+  /* LEMUR */
+  --color-lemur-purple: #9193f8;
+  --color-lemur-orange: #ffba07;
+  /* PENGUIN */
+  --color-penguin-blue: #bde0fe;
+  --color-penguin-yellow: #ffd166;
+  /* SKUNK */
+  --color-skunk-pink: #ffbbbd;
+  --color-skunk-mint: #84dcc6;
+}
+
+/***************************************
+Tailwind Custom Reusable Classes
+*****************************************/
+
+.cart-btn {
+  @apply bg-dark-main text-2xl font-title text-light-main;
 }
