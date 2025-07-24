@@ -1,7 +1,12 @@
-<script setup></script>
+<script setup>
+import flatLogo from '@/assets/images/mobile/flat-logo.svg'
+</script>
 
 <template>
-  <h1 class="text-3xl text-panda-orange cart-btn">app vue here</h1>
+  <!-- Mobile Logo -->
+  <figure>
+    <img :src="flatLogo" width="700" height="200" alt="Bean and Beast logo" class="w-full" />
+  </figure>
 </template>
 
 <style scoped></style>
