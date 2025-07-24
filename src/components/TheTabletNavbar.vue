@@ -9,7 +9,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <nav class="tablet-nav inline-reg">
+  <nav class="tablet-nav inline-reg lg-max-width">
     <figure>
       <img :src="flatLogo" alt="" />
     </figure>

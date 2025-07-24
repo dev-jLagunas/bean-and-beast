@@ -1,7 +1,11 @@
-<script setup></script>
+<script setup>
+
+// Components
+import TheHero from '@/components/TheHero.vue';
+</script>
 
 <template>
-  <p>home viwe here</p>
+  <TheHero/>
 </template>
 
 <style scoped></style>
