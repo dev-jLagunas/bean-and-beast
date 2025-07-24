@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@import './custom.css';
+
+/***************************************
+Global Styles
+*****************************************/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/***************************************
+Tailwind Variables
+*****************************************/
+@theme {
+}
