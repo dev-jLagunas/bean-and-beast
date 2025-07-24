@@ -43,7 +43,7 @@ const slides = [
     <SwiperSlide v-for="(slide, index) in slides" :key="index">
       <picture>
         <source :srcset="slide.lg" media="(min-width: 500px)" />
-        <img :src="slide.sm" :alt="slide.alt" class="w-full xl:object-contain" />
+        <img :src="slide.sm" :alt="slide.alt" class="w-full" />
       </picture>
     </SwiperSlide>
   </Swiper>
