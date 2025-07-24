@@ -22,6 +22,8 @@ Tailwind Variables
   /* COLORS */
   --color-dark-main: #333333;
   --color-light-main: #f4f4f4;
+  --color-muted: #777;
+  --color-light-muted: #d4d4d4;
   /* PANDA */
   --color-panda-orange: #f9c74f;
   --color-panda-light: #fff7e2;
@@ -54,9 +56,36 @@ Tailwind Custom Reusable Classes
   @apply flex flex-row justify-evenly items-center;
 }
 
+.flex-center-center {
+  @apply flex flex-row justify-center items-center;
+}
+
+/* Spacing Stylings */
+.inline-reg {
+  @apply mx-4;
+}
+
+/* Font stylings */
+.fredo-p-light {
+  @apply font-title font-light text-base;
+}
+
+/* Tablet Nav */
+.tablet-nav {
+  @apply hidden md:flex md:mx-auto md:max-w-[1200px];
+}
+
+.tablet-nav-wrapper {
+  @apply w-full text-dark-main;
+}
+
+.tablet-nav-item {
+  @apply text-center lg:text-lg;
+}
+
 /* Footer Nav */
 .footer-nav {
-  @apply fixed bottom-0 w-full;
+  @apply fixed bottom-0 w-full md:hidden;
 }
 
 .footer-nav-wrapper {

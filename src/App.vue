@@ -1,6 +1,7 @@
 <script setup>
 // Components
 import TheMobileNavbar from './components/TheMobileNavbar.vue'
+import TheTabletNavbar from './components/TheTabletNavbar.vue'
 // Images
 import flatLogo from '@/assets/images/mobile/flat-logo.svg'
 </script>
@@ -8,8 +9,16 @@ import flatLogo from '@/assets/images/mobile/flat-logo.svg'
 <template>
   <!-- Mobile Logo -->
   <figure>
-    <img :src="flatLogo" width="700" height="200" alt="Bean and Beast logo" class="w-full" />
+    <img
+      :src="flatLogo"
+      width="700"
+      height="200"
+      alt="Bean and Beast logo"
+      class="w-full md:hidden"
+    />
   </figure>
+  <!-- 768px + Nav -->
+  <TheTabletNavbar />
   <main>
     <router-view v-slot="{ Component }">
       <transition name="page">
@@ -17,6 +26,7 @@ import flatLogo from '@/assets/images/mobile/flat-logo.svg'
       </transition>
     </router-view>
   </main>
+  <!-- 768px - Nav -->
   <TheMobileNavbar />
 </template>
 
