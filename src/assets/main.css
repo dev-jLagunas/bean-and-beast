@@ -79,6 +79,10 @@ Tailwind Custom Reusable Classes
   @apply w-full h-full object-contain;
 }
 
+.img-cover {
+  @apply h-full w-full object-cover;
+}
+
 /* Widths */
 .lg-max-width {
   @apply max-w-[1400px];
@@ -119,6 +123,14 @@ Tailwind Custom Reusable Classes
 }
 .two-btn-wrapper {
   @apply grid grid-cols-2 gap-4 my-2;
+}
+
+.home-lore-section-wrapper {
+ @apply mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-4 md:mt-16
+}
+
+.home-lore-card-wrapper {
+  @apply grid grid-cols-5 gap-4 place-items-center px-4;
 }
 
 .lato-p-light {

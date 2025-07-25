@@ -1,20 +1,29 @@
 import { defineStore } from 'pinia'
 
 // Images
+// *****LOGO IMAGES******
 import zebraLogo from '@/assets/images/zebra-logo-reg.webp'
 import penguinLogo from '@/assets/images/penguin-logo-reg.webp'
 import skunkLogo from '@/assets/images/skunk-logo-reg.webp'
 import pandaLogo from '@/assets/images/panda-logo-reg.webp'
 import cowLogo from '@/assets/images/cow-logo-reg.webp'
 import lemurLogo from '@/assets/images/lemur-logo-reg.webp'
+// *****SINGLE ITEM IMAGES******
 import zebraSingleMd from '@/assets/images/tablet/home/zebra-single-md.webp'
 import pandaSingleMd from '@/assets/images/tablet/home/panda-single-md.webp'
 import skunkSingleMd from '@/assets/images/tablet/home/skunk-single-md.webp'
 import cowSingleMd from '@/assets/images/tablet/home/cow-single-md.webp'
 import penguinSingleMd from '@/assets/images/tablet/home/penguin-single-md.webp'
 import lemurSingleMd from '@/assets/images/tablet/home/lemur-single-md.webp'
-
 import zebraSingleLg from '@/assets/images/desktop/home/zebra-single-lg.webp'
+
+// *****HOME LORE IMAGES******
+import homeLoreZebra from '@/assets/images/tablet/home/home-lore-zebra.png'
+import homeLoreLemur from '@/assets/images/tablet/home/home-lore-lemur.png'
+import homeLorePanda from '@/assets/images/tablet/home/home-lore-panda.png'
+import homeLoreSkunk from '@/assets/images/tablet/home/home-lore-skunk.png'
+import homeLorePenguin from '@/assets/images/tablet/home/home-lore-penguin.png'
+import homeLoreCow from '@/assets/images/tablet/home/home-lore-cow.png'
 
 export const useProductStore = defineStore('product', {
   state: () => ({
@@ -231,13 +240,13 @@ export const useProductStore = defineStore('product', {
     animalLore: [
       {
         id: 'zebra-bar',
-        animalName: 'Zebra',
+        animalName: 'The Zebra',
         deepStory:
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
         traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
-        animalLogo: 'zebra-logo.png',
+        animalLogo: zebraLogo,
         images: [
-          'img-a.png',
+          homeLoreZebra,
           'img-b.png',
           'img-c.png',
           'img-d.png',
@@ -246,7 +255,108 @@ export const useProductStore = defineStore('product', {
           'img-g.png',
           'img-h.png',
         ],
-        shortLore: 'The Zebra is your confident guide — equal parts grace and defiance.',
+        shortLore:
+          'The Zebra is your confident guide. The Zebra is equal parts grace and defiance.',
+      },
+      {
+        id: 'cow-bar',
+        animalName: 'The Cow',
+        deepStory:
+          'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
+        traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
+        animalLogo: zebraLogo,
+        images: [
+          homeLoreCow,
+          'img-b.png',
+          'img-c.png',
+          'img-d.png',
+          'img-e.png',
+          'img-f.png',
+          'img-g.png',
+          'img-h.png',
+        ],
+        shortLore:
+          'The Cow is steady and nurturing. Grounded in tradition, it offers calm in a fast-moving world.',
+      },
+      {
+        id: 'penguin-bar',
+        animalName: 'The Penguin',
+        deepStory:
+          'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
+        traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
+        animalLogo: zebraLogo,
+        images: [
+          homeLorePenguin,
+          'img-b.png',
+          'img-c.png',
+          'img-d.png',
+          'img-e.png',
+          'img-f.png',
+          'img-g.png',
+          'img-h.png',
+        ],
+        shortLore:
+          'The Penguin thrives in extremes. Loyal and adaptable, it finds unity and warmth even in the coldest moments.',
+      },
+      {
+        id: 'lemur-bar',
+        animalName: 'The Lemur',
+        deepStory:
+          'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
+        traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
+        animalLogo: zebraLogo,
+        images: [
+          homeLoreLemur,
+          'img-b.png',
+          'img-c.png',
+          'img-d.png',
+          'img-e.png',
+          'img-f.png',
+          'img-g.png',
+          'img-h.png',
+        ],
+        shortLore:
+          'The Lemur is playful but sharp. Curious and nimble, it thrives on connection and instinctive choices.',
+      },
+      {
+        id: 'panda-bar',
+        animalName: 'The Panda',
+        deepStory:
+          'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
+        traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
+        animalLogo: zebraLogo,
+        images: [
+          homeLorePanda,
+          'img-b.png',
+          'img-c.png',
+          'img-d.png',
+          'img-e.png',
+          'img-f.png',
+          'img-g.png',
+          'img-h.png',
+        ],
+        shortLore:
+          'The Panda embodies peaceful strength. It lives slowly, choosing joy and balance over speed and pressure.',
+      },
+      {
+        id: 'skunk-bar',
+        animalName: 'The Skunk',
+        deepStory:
+          'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
+        traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
+        animalLogo: zebraLogo,
+        images: [
+          homeLoreSkunk,
+          'img-b.png',
+          'img-c.png',
+          'img-d.png',
+          'img-e.png',
+          'img-f.png',
+          'img-g.png',
+          'img-h.png',
+        ],
+        shortLore:
+          'The Skunk moves with quiet confidence. It demands respect, not attention, and flourishes by staying authentically itself.',
       },
     ],
   }),
