@@ -28,6 +28,11 @@ import twoShotZebra from '@/assets/images/tablet/guide/zebra-two-shot.webp'
 // *****SET IMAGES******
 import giftBoxMint from '@/assets/images/tablet/guide/gift-box-mint.webp'
 import giftBoxPink from '@/assets/images/tablet/guide/gift-box-pink.webp'
+import threePackA from '@/assets/images/tablet/products/three-pack-set-a.webp'
+import threePackB from '@/assets/images/tablet/products/three-pack-set-b.webp'
+import twoPackA from '@/assets/images/tablet/products/two-set-a.webp'
+import twoPackB from '@/assets/images/tablet/products/two-set-b.webp'
+import twoPackC from '@/assets/images/tablet/products/two-set-c.webp'
 
 // *****HOME LORE IMAGES******
 import homeLoreZebra from '@/assets/images/tablet/home/home-lore-zebra.png'
@@ -283,7 +288,7 @@ export const useProductStore = defineStore('product', {
           'Ideal for trying something new or sharing with a friend',
         ],
         recommendText: 'The perfect combo for those who crave variety but want thoughtful balance.',
-        images: ['img-c.png', 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
+        images: [twoPackA, twoPackB, 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
       },
       {
         id: 'three-bar-set',
@@ -304,7 +309,7 @@ export const useProductStore = defineStore('product', {
           'Perfect for those who “can’t choose just one”',
         ],
         recommendText: 'Great for variety seekers or as a bold, story-rich gift.',
-        images: ['img-c.png', 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
+        images: [threePackA, 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
       },
       {
         id: 'four-bar-set',
