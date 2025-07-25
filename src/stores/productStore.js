@@ -22,7 +22,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'zebra-bar',
         name: 'The Zebra',
-        flavor: 'Dark chocolate with Chili & Sea Salt',
+        flavor: 'Dark chocolate with Chili and Sea Salt',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-zebra-cyan',
@@ -56,7 +56,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'penguin-bar',
         name: 'The Penguin',
-        flavor: 'Peppermint & Dark Chocolate',
+        flavor: 'Italian Peppermint and Dark Chocolate',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-penguin-blue',
@@ -91,7 +91,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'panda-bar',
         name: 'The Panda',
-        flavor: 'Matcha & White Chocolate',
+        flavor: 'Green Tea and White Chocolate',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-panda-orange',
@@ -125,7 +125,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'skunk-bar',
         name: 'The Skunk',
-        flavor: 'Strawberry & Rose Milk Chocolate',
+        flavor: 'Strawberry and Rose Milk Chocolate',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-skunk-pink',
@@ -195,7 +195,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'cow-bar',
         name: 'The Cow',
-        flavor: 'Milk Chocolate with Salted Caramel & Vanilla',
+        flavor: 'Milk Chocolate with Salted Caramel and Vanilla',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-cow-red',

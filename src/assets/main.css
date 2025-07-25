@@ -93,6 +93,9 @@ Tailwind Custom Reusable Classes
 .fredo-p-light {
   @apply font-title font-light text-base;
 }
+.font-small-copy {
+  @apply font-paragraph font-light text-dark-main;
+}
 
 .font-section-title {
   @apply font-title font-light tracking-wide uppercase text-2xl;
@@ -148,11 +151,15 @@ Tailwind Custom Reusable Classes
   @apply text-2xl;
 }
 
-/* hovers */
+/* btns */
 .white-btn {
   @apply bg-light-muted px-2 py-1 rounded-xs text-dark-main font-title font-light hover:bg-muted hover:text-light-main hover:cursor-pointer hover:border-0 transition-all duration-200 ease-in-out;
 }
 
 .black-btn {
   @apply bg-dark-main px-2 py-1 text-light-main font-semibold rounded-xs hover:bg-muted hover:text-light-main hover:cursor-pointer  transition-all duration-200 ease-in-out;
+}
+
+.all-products-btn {
+  @apply font-title font-semibold tracking-wider capitalize text-2xl border rounded-sm px-4 py-1 text-dark-main border-muted hover:bg-dark-main hover:text-light-main hover:cursor-pointer transition-all duration-200 ease-in-out;
 }
