@@ -9,6 +9,10 @@ Global Styles
   list-style: none;
 }
 
+body {
+  margin-bottom: 10rem;
+}
+
 /***************************************
 Tailwind Variables
 *****************************************/
@@ -80,9 +84,13 @@ Tailwind Custom Reusable Classes
   @apply font-title font-light tracking-wide uppercase text-2xl;
 }
 
+.fredo-title {
+  @apply font-title font-semibold text-lg tracking-wide text-dark-main;
+}
+
 /* Wrappers */
 .section-wrapper {
-  @apply bg-light-muted w-full mt-16 px-4 py-6;
+  @apply bg-light-muted w-full mt-16 px-4 py-6 md:max-w-[600px] md:mx-auto md:px-8 md:mb-8;
 }
 
 .lato-p-light {
