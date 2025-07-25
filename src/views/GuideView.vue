@@ -213,7 +213,7 @@ const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
         customClass="mt-48 mb-8"
       />
     </div>
-    <section class="md:grid md:grid-cols-2">
+    <section class="grid gap-8 md:grid md:grid-cols-2">
       <article class="mx-4">
         <div class="flex-between-center">
           <h3 class="fredo-title border-b-4" :class="fourBarSet.borderColorClass">

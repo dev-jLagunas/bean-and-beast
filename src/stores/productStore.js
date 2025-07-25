@@ -8,14 +8,29 @@ import skunkLogo from '@/assets/images/skunk-logo-reg.webp'
 import pandaLogo from '@/assets/images/panda-logo-reg.webp'
 import cowLogo from '@/assets/images/cow-logo-reg.webp'
 import lemurLogo from '@/assets/images/lemur-logo-reg.webp'
+import chocoLogo from '@/assets/images/choco-logo.png'
 
 // *****SINGLE ITEM IMAGES******
-import zebraSingleMd from '@/assets/images/tablet/home/zebra-single-md.webp'
-import pandaSingleMd from '@/assets/images/tablet/home/panda-single-md.webp'
-import skunkSingleMd from '@/assets/images/tablet/home/skunk-single-md.webp'
-import cowSingleMd from '@/assets/images/tablet/home/cow-single-md.webp'
-import penguinSingleMd from '@/assets/images/tablet/home/penguin-single-md.webp'
-import lemurSingleMd from '@/assets/images/tablet/home/lemur-single-md.webp'
+import zebraSingleColor from '@/assets/images/tablet/home/zebra-single-md.webp'
+import ZebraCollage from '@/assets/images/tablet/products/zebra-collage.webp'
+import zebraSingleWhite from '@/assets/images/tablet/products/zebra-single-white.webp'
+import pandaSingleColor from '@/assets/images/tablet/home/panda-single-md.webp'
+import pandaSingleWhite from '@/assets/images/tablet/products/panda-single-white.webp'
+import pandaCollage from '@/assets/images/tablet/products/panda-collage.webp'
+import skunkSingleWhite from '@/assets/images/tablet/products/skunk-single-white.webp'
+import skunkCollage from '@/assets/images/tablet/products/skunk-collage.webp'
+
+import skunkSingleColor from '@/assets/images/tablet/home/skunk-single-md.webp'
+import cowSingleColor from '@/assets/images/tablet/home/cow-single-md.webp'
+import cowSingleWhite from '@/assets/images/tablet/products/cow-single-white.webp'
+import cowCollage from '@/assets/images/tablet/products/cow-collage.webp'
+import penguinSingleColor from '@/assets/images/tablet/home/penguin-single-md.webp'
+import penguinSingleWhite from '@/assets/images/tablet/products/penguin-single-white.webp'
+import penguinCollage from '@/assets/images/tablet/products/penguin-collage.webp'
+
+import lemurSingleColor from '@/assets/images/tablet/home/lemur-single-md.webp'
+import lemurSingleWhite from '@/assets/images/tablet/products/lemur-single-white.webp'
+import lemurCollage from '@/assets/images/tablet/products/penguin-collage.webp'
 
 // *****TWO SHOT IMAGES******
 import twoShotCow from '@/assets/images/tablet/guide/cow-two-shot.webp'
@@ -27,9 +42,17 @@ import twoShotZebra from '@/assets/images/tablet/guide/zebra-two-shot.webp'
 
 // *****SET IMAGES******
 import giftBoxMint from '@/assets/images/tablet/guide/gift-box-mint.webp'
+import giftBoxPurple from '@/assets/images/tablet/products/gift-box-purple.webp'
+
 import giftBoxPink from '@/assets/images/tablet/guide/gift-box-pink.webp'
 import threePackA from '@/assets/images/tablet/products/three-pack-set-a.webp'
 import threePackB from '@/assets/images/tablet/products/three-pack-set-b.webp'
+import threePackC from '@/assets/images/tablet/products/three-pack-set-c.webp'
+import fourPackA from '@/assets/images/tablet/products/four-pack-set-a.webp'
+import fourPackB from '@/assets/images/tablet/products/four-pack-set-b.webp'
+import fourPackC from '@/assets/images/tablet/products/four-pack-set-c.webp'
+import fourPackD from '@/assets/images/tablet/products/four-pack-set-d.webp'
+
 import twoPackA from '@/assets/images/tablet/products/two-set-a.webp'
 import twoPackB from '@/assets/images/tablet/products/two-set-b.webp'
 import twoPackC from '@/assets/images/tablet/products/two-set-c.webp'
@@ -59,6 +82,7 @@ export const useProductStore = defineStore('product', {
         flavor: 'Dark chocolate with Chili and Sea Salt',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
+        category: 'single',
         tags: ['playful', 'fruity', 'bold'],
         borderColorClass: 'border-b-zebra-cyan',
         characterLogo: zebraLogo,
@@ -77,16 +101,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          zebraSingleMd,
-          twoShotZebra,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [zebraSingleColor, twoShotZebra, zebraSingleWhite, ZebraCollage],
       },
       {
         id: 'penguin-bar',
@@ -96,6 +111,7 @@ export const useProductStore = defineStore('product', {
         price: 8.5,
         borderColorClass: 'border-b-penguin-blue',
         tags: ['dark', 'bold', 'elegant'],
+        category: 'single',
         characterLogo: penguinLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
@@ -112,16 +128,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          penguinSingleMd,
-          twoShotPenguin,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [penguinSingleColor, twoShotPenguin, penguinSingleWhite, penguinCollage],
       },
       {
         id: 'panda-bar',
@@ -132,6 +139,7 @@ export const useProductStore = defineStore('product', {
         borderColorClass: 'border-b-panda-orange',
         characterLogo: pandaLogo,
         tags: ['myself', 'elegant', 'dark'],
+        category: 'single',
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
           'Striking personality',
@@ -147,16 +155,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          pandaSingleMd,
-          twoShotPanda,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [pandaSingleColor, twoShotPanda, pandaSingleWhite, pandaCollage],
       },
       {
         id: 'skunk-bar',
@@ -166,6 +165,7 @@ export const useProductStore = defineStore('product', {
         price: 8.5,
         borderColorClass: 'border-b-skunk-pink',
         tags: ['bold', 'dark', 'playful', 'myself'],
+        category: 'single',
         characterLogo: skunkLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
@@ -182,22 +182,14 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          skunkSingleMd,
-          twoShotSkunk,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [skunkSingleColor, twoShotSkunk, skunkSingleWhite, skunkCollage],
       },
       {
         id: 'lemur-bar',
         name: 'The Lemur',
         flavor: 'Peppermint and dark chocolate mint',
         description: 'Banana, Peanut Butter, & Milk Chocolate',
+        category: 'single',
         price: 8.5,
         tags: ['chill', 'light', 'playful'],
 
@@ -218,16 +210,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          lemurSingleMd,
-          twoShotLemur,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [lemurSingleColor, twoShotLemur, lemurSingleWhite, lemurCollage],
       },
       {
         id: 'cow-bar',
@@ -237,6 +220,7 @@ export const useProductStore = defineStore('product', {
         price: 8.5,
         borderColorClass: 'border-b-cow-red',
         tags: ['nutty', 'light', 'chill'],
+        category: 'single',
         characterLogo: cowLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
@@ -253,16 +237,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          cowSingleMd,
-          twoShotCow,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [cowSingleColor, twoShotCow, cowSingleWhite, cowCollage],
       },
       {
         id: 'two-bar-set',
@@ -272,8 +247,9 @@ export const useProductStore = defineStore('product', {
           'Explore the dynamic duo of our premium chocolate bars. Perfect for gifting or a personal indulgence.',
         price: 16,
         tags: ['curated', 'bold', 'balanced'],
+        category: 'set',
         borderColorClass: 'border-b-zebra-red',
-        characterLogo: miniLogo,
+        characterLogo: chocoLogo,
         flavorProfile: ['Rich contrast', 'Balanced notes', 'Double impact', 'Smooth finish'],
         characterProfile: [
           'Thoughtfully paired',
@@ -288,7 +264,7 @@ export const useProductStore = defineStore('product', {
           'Ideal for trying something new or sharing with a friend',
         ],
         recommendText: 'The perfect combo for those who crave variety but want thoughtful balance.',
-        images: [twoPackA, twoPackB, 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
+        images: [twoPackA, twoPackB, twoPackC],
       },
       {
         id: 'three-bar-set',
@@ -298,8 +274,9 @@ export const useProductStore = defineStore('product', {
           'Dive into a trio of character-driven bars. A flavorful snapshot of our Beast & Bean universe.',
         price: 24,
         tags: ['playful', 'gift-ready', 'versatile'],
+        category: 'set',
         borderColorClass: 'border-b-lemur-gold',
-        characterLogo: miniLogo,
+        characterLogo: chocoLogo,
         flavorProfile: ['Vivid variety', 'Snackable set', 'Distinct moods', 'Unforgettable taste'],
         characterProfile: ['Expressive', 'Multi-dimensional', 'Memorable', 'Just enough'],
         itemDetails: [
@@ -309,7 +286,7 @@ export const useProductStore = defineStore('product', {
           'Perfect for those who “can’t choose just one”',
         ],
         recommendText: 'Great for variety seekers or as a bold, story-rich gift.',
-        images: [threePackA, 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
+        images: [threePackA, threePackB, threePackC],
       },
       {
         id: 'four-bar-set',
@@ -320,8 +297,9 @@ export const useProductStore = defineStore('product', {
           'Four distinct characters, four unforgettable bars. A journey in taste, contrast, and storytelling.',
         price: 32,
         tags: ['depth', 'sampler', 'crafted'],
+        category: 'set',
         borderColorClass: 'border-b-panda-rose',
-        characterLogo: miniLogo,
+        characterLogo: chocoLogo,
         flavorProfile: [
           'Deep exploration',
           'Flavors that evolve',
@@ -337,7 +315,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Crafted for flavor enthusiasts who love exploring the full spectrum of chocolate design.',
-        images: [giftBoxMint, 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
+        images: [fourPackA, fourPackB, fourPackC, fourPackD, giftBoxMint],
       },
       {
         id: 'six-bar-set',
@@ -347,8 +325,9 @@ export const useProductStore = defineStore('product', {
           'A full set of character-rich bars, each wrapped in visual storytelling and premium chocolate.',
         price: 48,
         tags: ['complete', 'luxury', 'collector'],
+        category: 'set',
         borderColorClass: 'border-b-penguin-sky',
-        characterLogo: miniLogo,
+        characterLogo: chocoLogo,
         flavorProfile: [
           'Full experience',
           'Visual & flavorful',
@@ -368,7 +347,7 @@ export const useProductStore = defineStore('product', {
           'Each bar made from ethically sourced cacao and wrapped in brand-exclusive art',
         ],
         recommendText: 'A show-stopping gift or a self-indulgent dive into the Bean & Beast world.',
-        images: [giftBoxPink, 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
+        images: [giftBoxPink, threePackA, threePackB, fourPackA, fourPackD, giftBoxPurple],
       },
     ],
     animalLore: [
@@ -501,6 +480,7 @@ export const useProductStore = defineStore('product', {
         description:
           'Our signature hoodie brings bold color and quiet strength to every day comfort',
         price: 45,
+        category: 'merch',
         borderColorClass: 'border-b-zebra-cyan',
         storeLogo: miniLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
@@ -535,6 +515,8 @@ export const useProductStore = defineStore('product', {
         description:
           'Our signature hoodie brings bold color and quiet strength to every day comfort',
         price: 45,
+        category: 'merch',
+
         borderColorClass: 'border-b-zebra-cyan',
         storeLogo: miniLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
@@ -569,6 +551,8 @@ export const useProductStore = defineStore('product', {
         description:
           'Our signature hoodie brings bold color and quiet strength to every day comfort',
         price: 45,
+        category: 'merch',
+
         borderColorClass: 'border-b-zebra-cyan',
         storeLogo: miniLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
@@ -603,6 +587,8 @@ export const useProductStore = defineStore('product', {
         description:
           'Our signature hoodie brings bold color and quiet strength to every day comfort',
         price: 50,
+        category: 'merch',
+
         borderColorClass: 'border-b-zebra-cyan',
         storeLogo: miniLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],

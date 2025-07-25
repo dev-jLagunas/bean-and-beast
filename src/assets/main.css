@@ -169,6 +169,10 @@ Tailwind Custom Reusable Classes
   @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3
 }
 
+.product-section-wrapper {
+  @apply border-b-4 border-double border-b-light-muted mx-4
+}
+
 /* Tablet Nav */
 .tablet-nav {
   @apply hidden md:flex md:mx-auto;
