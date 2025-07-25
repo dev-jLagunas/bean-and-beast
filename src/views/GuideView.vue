@@ -25,6 +25,7 @@ import pandaLogo from '@/assets/images/panda-logo-reg.webp'
 import chocoLogo from '@/assets/images/choco-logo.png'
 import loadingLogo from '@/assets/images/loading-logo.png'
 import squareLogo from '@/assets/images/square-logo-reg.svg'
+import zebraPeaking from '@/assets/images/section-peek-zebra.png'
 
 // Reactive
 const isLoading = ref(false)
@@ -122,6 +123,10 @@ function generateRecommendations() {
 
   topProducts.value = scored.sort((a, b) => b.score - a.score).slice(0, 3)
 }
+
+// Set Data
+const fourBarSet = productsStore.products.find((p) => p.id === 'four-bar-set')
+const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
 </script>
 
 <template>
@@ -137,11 +142,7 @@ function generateRecommendations() {
     class="guide-main-wrapper"
     :class="['quiz-question', quizCardContent[currentIndex].themeClass]"
   >
-    <img
-      :src="squareLogo"
-      alt="square bean and beast logo"
-      class="img-special"
-    />
+    <img :src="squareLogo" alt="square bean and beast logo" class="img-special" />
     <div class="w-fit flex-start-center">
       <img
         :src="quizCardContent[currentIndex].characterLogo"
@@ -173,12 +174,92 @@ function generateRecommendations() {
   </div>
   <SeeProductsBtn />
   <section v-if="showResults" id="quiz-results" class="guide-results-wrapper">
-    <h2 class="font-section-title">Your Top 3 Matches</h2>
-    <div class="result-card" v-for="product in topProducts" :key="product.id">
-      <img :src="product.image" :alt="product.name" class="h-32 mb-4" />
-      <h3 class="fredo-title">{{ product.name }}</h3>
-      <p class="lato-p-light">{{ product.recommendText }}</p>
+    <SectionTitle
+      title="your top three"
+      description="Based on your answer we think you'll love the following choices. How did we do?"
+      :img="zebraPeaking"
+      customClass="mt-48 mb-8"
+    />
+    <article class="top-three-wrapper">
+      <div class="mx-4" v-for="product in topProducts" :key="product.id">
+        <div class="flex-between-center">
+          <h3 class="fredo-title border-b-4" :class="product.borderColorClass">
+            {{ product.name }}
+          </h3>
+          <p class="font-price">${{ product.price }}</p>
+        </div>
+        <ul class="flex-between-center mt-2">
+          <li class="font-main-copy">{{ product.flavorProfile[0] }}</li>
+          <li><i class="fa-solid fa-grip-lines-vertical text-dark-main"></i></li>
+          <li class="font-main-copy">{{ product.flavorProfile[2] }}</li>
+        </ul>
+
+        <figure class="h-60 shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)]">
+          <img :src="product.images[1]" :alt="product.name" class="img-cover" />
+        </figure>
+        <p class="font-main-copy mt-2">{{ product.recommendText }}</p>
+        <div class="two-btn-wrapper">
+          <button class="white-btn">See Details</button>
+          <button class="black-btn">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <SeeProductsBtn />
+    <div>
+      <SectionTitle
+        title="we also have sets"
+        description="Based on your answer we think you'll love the following choices. How did we do?"
+        :img="zebraPeaking"
+        customClass="mt-48 mb-8"
+      />
     </div>
+    <section class="md:grid md:grid-cols-2">
+      <article class="mx-4">
+        <div class="flex-between-center">
+          <h3 class="fredo-title border-b-4" :class="fourBarSet.borderColorClass">
+            {{ fourBarSet.name }}
+          </h3>
+          <p class="font-price">${{ fourBarSet.price }}</p>
+        </div>
+        <ul class="flex-between-center mt-2">
+          <li class="font-main-copy">{{ fourBarSet.flavorProfile[0] }}</li>
+          <li><i class="fa-solid fa-grip-lines-vertical text-dark-main"></i></li>
+          <li class="font-main-copy">{{ fourBarSet.flavorProfile[2] }}</li>
+        </ul>
+
+        <figure class="h-60 shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)]">
+          <img :src="fourBarSet.images[0]" :alt="fourBarSet.name" class="img-cover" />
+        </figure>
+        <p class="font-main-copy mt-2">{{ fourBarSet.recommendText }}</p>
+        <div class="two-btn-wrapper">
+          <button class="white-btn">See Details</button>
+          <button class="black-btn">Add to Cart</button>
+        </div>
+      </article>
+      <article class="mx-4">
+        <div class="flex-between-center">
+          <h3 class="fredo-title border-b-4" :class="sixBarSet.borderColorClass">
+            {{ sixBarSet.name }}
+          </h3>
+          <p class="font-price">${{ sixBarSet.price }}</p>
+        </div>
+        <ul class="flex-between-center mt-2">
+          <li class="font-main-copy">{{ sixBarSet.flavorProfile[0] }}</li>
+          <li><i class="fa-solid fa-grip-lines-vertical text-dark-main"></i></li>
+          <li class="font-main-copy">{{ sixBarSet.flavorProfile[2] }}</li>
+        </ul>
+
+        <figure class="h-60 shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)]">
+          <img :src="sixBarSet.images[0]" :alt="sixBarSet.name" class="img-cover" />
+        </figure>
+        <p class="font-main-copy mt-2">{{ sixBarSet.recommendText }}</p>
+        <div class="two-btn-wrapper">
+          <button class="white-btn">See Details</button>
+          <button class="black-btn">Add to Cart</button>
+        </div>
+      </article>
+    </section>
+    <SeeProductsBtn />
   </section>
 </template>
 

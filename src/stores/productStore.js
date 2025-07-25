@@ -8,6 +8,7 @@ import skunkLogo from '@/assets/images/skunk-logo-reg.webp'
 import pandaLogo from '@/assets/images/panda-logo-reg.webp'
 import cowLogo from '@/assets/images/cow-logo-reg.webp'
 import lemurLogo from '@/assets/images/lemur-logo-reg.webp'
+
 // *****SINGLE ITEM IMAGES******
 import zebraSingleMd from '@/assets/images/tablet/home/zebra-single-md.webp'
 import pandaSingleMd from '@/assets/images/tablet/home/panda-single-md.webp'
@@ -15,7 +16,18 @@ import skunkSingleMd from '@/assets/images/tablet/home/skunk-single-md.webp'
 import cowSingleMd from '@/assets/images/tablet/home/cow-single-md.webp'
 import penguinSingleMd from '@/assets/images/tablet/home/penguin-single-md.webp'
 import lemurSingleMd from '@/assets/images/tablet/home/lemur-single-md.webp'
-import zebraSingleLg from '@/assets/images/desktop/home/zebra-single-lg.webp'
+
+// *****TWO SHOT IMAGES******
+import twoShotCow from '@/assets/images/tablet/guide/cow-two-shot.webp'
+import twoShotLemur from '@/assets/images/tablet/guide/lemur-two-shot.webp'
+import twoShotPanda from '@/assets/images/tablet/guide/panda-two-shot.webp'
+import twoShotPenguin from '@/assets/images/tablet/guide/penguin-two-shot.webp'
+import twoShotSkunk from '@/assets/images/tablet/guide/skunk-two-shot.webp'
+import twoShotZebra from '@/assets/images/tablet/guide/zebra-two-shot.webp'
+
+// *****SET IMAGES******
+import giftBoxMint from '@/assets/images/tablet/guide/gift-box-mint.webp'
+import giftBoxPink from '@/assets/images/tablet/guide/gift-box-pink.webp'
 
 // *****HOME LORE IMAGES******
 import homeLoreZebra from '@/assets/images/tablet/home/home-lore-zebra.png'
@@ -62,7 +74,7 @@ export const useProductStore = defineStore('product', {
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
         images: [
           zebraSingleMd,
-          zebraSingleLg,
+          twoShotZebra,
           'img-c.png',
           'img-d.png',
           'img-e.png',
@@ -97,7 +109,7 @@ export const useProductStore = defineStore('product', {
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
         images: [
           penguinSingleMd,
-          'img-b.png',
+          twoShotPenguin,
           'img-c.png',
           'img-d.png',
           'img-e.png',
@@ -132,7 +144,7 @@ export const useProductStore = defineStore('product', {
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
         images: [
           pandaSingleMd,
-          'img-b.png',
+          twoShotPanda,
           'img-c.png',
           'img-d.png',
           'img-e.png',
@@ -167,7 +179,7 @@ export const useProductStore = defineStore('product', {
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
         images: [
           skunkSingleMd,
-          'img-b.png',
+          twoShotSkunk,
           'img-c.png',
           'img-d.png',
           'img-e.png',
@@ -203,7 +215,7 @@ export const useProductStore = defineStore('product', {
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
         images: [
           lemurSingleMd,
-          'img-b.png',
+          twoShotLemur,
           'img-c.png',
           'img-d.png',
           'img-e.png',
@@ -238,7 +250,7 @@ export const useProductStore = defineStore('product', {
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
         images: [
           cowSingleMd,
-          'img-b.png',
+          twoShotCow,
           'img-c.png',
           'img-d.png',
           'img-e.png',
@@ -246,6 +258,112 @@ export const useProductStore = defineStore('product', {
           'img-g.png',
           'img-h.png',
         ],
+      },
+      {
+        id: 'two-bar-set',
+        name: 'Two Bar Set',
+        flavor: 'A thoughtful pairing of two bold flavors — curated for balance and contrast.',
+        description:
+          'Explore the dynamic duo of our premium chocolate bars. Perfect for gifting or a personal indulgence.',
+        price: 16,
+        tags: ['curated', 'bold', 'balanced'],
+        borderColorClass: 'border-b-zebra-red',
+        characterLogo: miniLogo,
+        flavorProfile: ['Rich contrast', 'Balanced notes', 'Double impact', 'Smooth finish'],
+        characterProfile: [
+          'Thoughtfully paired',
+          'Flavor-forward',
+          'Distinct personalities',
+          'Shared strength',
+        ],
+        itemDetails: [
+          'Includes two full-size bars of your choice',
+          'Carefully selected for complementary flavor profiles',
+          'Wrapped in signature black-and-white character designs',
+          'Ideal for trying something new or sharing with a friend',
+        ],
+        recommendText: 'The perfect combo for those who crave variety but want thoughtful balance.',
+        images: ['img-c.png', 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
+      },
+      {
+        id: 'three-bar-set',
+        name: 'Three Bar Set',
+        flavor: 'Three standout flavors — selected to match your mood, vibe, or gift intention.',
+        description:
+          'Dive into a trio of character-driven bars. A flavorful snapshot of our Beast & Bean universe.',
+        price: 24,
+        tags: ['playful', 'gift-ready', 'versatile'],
+        borderColorClass: 'border-b-lemur-gold',
+        characterLogo: miniLogo,
+        flavorProfile: ['Vivid variety', 'Snackable set', 'Distinct moods', 'Unforgettable taste'],
+        characterProfile: ['Expressive', 'Multi-dimensional', 'Memorable', 'Just enough'],
+        itemDetails: [
+          'Features three different bars, each with unique personalities',
+          'Includes a mix of dark, milk, and playful flavors',
+          'Comes boxed with a vibrant card explaining each animal’s story',
+          'Perfect for those who “can’t choose just one”',
+        ],
+        recommendText: 'Great for variety seekers or as a bold, story-rich gift.',
+        images: ['img-c.png', 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
+      },
+      {
+        id: 'four-bar-set',
+        name: 'Four Bar Set',
+        flavor:
+          'A rich flight of flavors and personalities — explore the deeper side of Bean & Beast.',
+        description:
+          'Four distinct characters, four unforgettable bars. A journey in taste, contrast, and storytelling.',
+        price: 32,
+        tags: ['depth', 'sampler', 'crafted'],
+        borderColorClass: 'border-b-panda-rose',
+        characterLogo: miniLogo,
+        flavorProfile: [
+          'Deep exploration',
+          'Flavors that evolve',
+          'Contrast & harmony',
+          'Narrative richness',
+        ],
+        characterProfile: ['Adventurous', 'Sophisticated', 'Story-driven', 'Artfully paired'],
+        itemDetails: [
+          'Four full bars representing a balance of dark, milk, and playful infusions',
+          'Each bar features a unique animal character and origin story',
+          'Designed as a tasting flight with visual storytelling cards included',
+          'Pairs well with wine tastings or cozy evenings',
+        ],
+        recommendText:
+          'Crafted for flavor enthusiasts who love exploring the full spectrum of chocolate design.',
+        images: [giftBoxMint, 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
+      },
+      {
+        id: 'six-bar-set',
+        name: 'The Full Collection',
+        flavor: 'All six flavors. All six beasts. The complete Bean & Beast experience.',
+        description:
+          'A full set of character-rich bars, each wrapped in visual storytelling and premium chocolate.',
+        price: 48,
+        tags: ['complete', 'luxury', 'collector'],
+        borderColorClass: 'border-b-penguin-sky',
+        characterLogo: miniLogo,
+        flavorProfile: [
+          'Full experience',
+          'Visual & flavorful',
+          'Balanced & bold',
+          'Signature gift',
+        ],
+        characterProfile: [
+          'Collector-ready',
+          'Emotionally engaging',
+          'Design-focused',
+          'Perfectly curated',
+        ],
+        itemDetails: [
+          'Includes all six animal-themed bars with matching storytelling elements',
+          'Presented in a premium display box with character bios and pairing suggestions',
+          'Perfect for milestone gifts, design lovers, and chocolate collectors',
+          'Each bar made from ethically sourced cacao and wrapped in brand-exclusive art',
+        ],
+        recommendText: 'A show-stopping gift or a self-indulgent dive into the Bean & Beast world.',
+        images: [giftBoxPink, 'img-d.png', 'img-e.png', 'img-f.png', 'img-g.png', 'img-h.png'],
       },
     ],
     animalLore: [

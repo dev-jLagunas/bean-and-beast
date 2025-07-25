@@ -165,6 +165,10 @@ Tailwind Custom Reusable Classes
   @apply w-[70vw] mx-auto mt-8 flex flex-col items-center justify-center max-w-[500px];
 }
 
+.top-three-wrapper {
+  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3
+}
+
 /* Tablet Nav */
 .tablet-nav {
   @apply hidden md:flex md:mx-auto;
