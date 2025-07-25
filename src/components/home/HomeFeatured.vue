@@ -29,40 +29,34 @@ function addToCart(product) {
 </script>
 
 <template>
-  <section class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-    <article
-      v-for="product in products"
-      :key="product.id"
-      class="flex flex-col justify-start items-start mx-4"
-    >
-      <figure class="h-24 mt-4">
+  <section class="gap-8 grid-two-four">
+    <article v-for="product in products" :key="product.id" class="mx-4">
+      <figure class="h-24 mt-4 w-fit">
         <img
           :src="product.characterLogo"
           :alt="`${product.name} character logo`"
-          class="w-full h-full object-contain"
+          class="img-full"
         />
       </figure>
 
       <div class="w-full">
-        <div class="flex justify-between items-center">
+        <div class="flex-between-center">
           <h3 class="fredo-title border-b-4" :class="product.borderColorClass">
             {{ product.name }}
           </h3>
-          <p class="font-paragraph text-lg font-light text-dark-main">
-            ${{ product.price.toFixed(2) }}
-          </p>
+          <p class="font-price">${{ product.price.toFixed(2) }}</p>
         </div>
-        <p class="font-paragraph text-dark-main tracking-wide">{{ product.flavor }}</p>
-        <div class="grid grid-cols-2 gap-2 my-2">
+        <p class="font-main-copy">{{ product.flavor }}</p>
+        <div class="two-btn-wrapper">
           <button
             @click="seeDetails(product.id)"
-            class="border border-dark-main px-2 py-1 rounded-xs font-title"
+            class="white-btn"
           >
             See Details
           </button>
           <button
             @click="addToCart(product)"
-            class="bg-dark-main px-2 py-1 text-light-main font-semibold rounded-xs"
+            class="black-btn"
           >
             Add to Cart
           </button>

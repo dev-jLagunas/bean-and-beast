@@ -62,9 +62,23 @@ Tailwind Custom Reusable Classes
   @apply flex flex-row justify-center items-center;
 }
 
+.flex-between-center {
+  @apply flex flex-row justify-between items-center;
+}
+
 .flex-col-start {
   @apply flex flex-col justify-center items-start;
 }
+
+.grid-two-four {
+  @apply sm:grid sm:grid-cols-2 lg:grid-cols-4;
+}
+
+/* Image styles */
+.img-full {
+  @apply w-full h-full object-contain;
+}
+
 /* Widths */
 .lg-max-width {
   @apply max-w-[1400px];
@@ -84,6 +98,14 @@ Tailwind Custom Reusable Classes
   @apply font-title font-light tracking-wide uppercase text-2xl;
 }
 
+.font-price {
+  @apply font-paragraph text-lg font-light text-dark-main;
+}
+
+.font-main-copy {
+  @apply font-paragraph text-dark-main tracking-wide;
+}
+
 .fredo-title {
   @apply font-title font-semibold text-lg tracking-wide text-dark-main;
 }
@@ -91,6 +113,9 @@ Tailwind Custom Reusable Classes
 /* Wrappers */
 .section-wrapper {
   @apply bg-light-muted w-full mt-16 px-4 py-6 md:max-w-[600px] md:mx-auto md:px-8 md:mb-8;
+}
+.two-btn-wrapper {
+  @apply grid grid-cols-2 gap-4 my-2;
 }
 
 .lato-p-light {
@@ -121,4 +146,13 @@ Tailwind Custom Reusable Classes
 
 .footer-icon {
   @apply text-2xl;
+}
+
+/* hovers */
+.white-btn {
+  @apply bg-light-muted px-2 py-1 rounded-xs text-dark-main font-title font-light hover:bg-muted hover:text-light-main hover:cursor-pointer hover:border-0 transition-all duration-200 ease-in-out;
+}
+
+.black-btn {
+  @apply bg-dark-main px-2 py-1 text-light-main font-semibold rounded-xs hover:bg-muted hover:text-light-main hover:cursor-pointer  transition-all duration-200 ease-in-out;
 }

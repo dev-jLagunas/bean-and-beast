@@ -22,7 +22,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'zebra-bar',
         name: 'The Zebra',
-        flavor: 'Peppermint and dark chocolate mint',
+        flavor: 'Dark chocolate with Chili & Sea Salt',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-zebra-cyan',
@@ -56,7 +56,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'penguin-bar',
         name: 'The Penguin',
-        flavor: 'Peppermint and dark chocolate mint',
+        flavor: 'Peppermint & Dark Chocolate',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-penguin-blue',
@@ -91,7 +91,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'panda-bar',
         name: 'The Panda',
-        flavor: 'Peppermint and dark chocolate mint',
+        flavor: 'Matcha & White Chocolate',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-panda-orange',
@@ -125,7 +125,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'skunk-bar',
         name: 'The Skunk',
-        flavor: 'Peppermint and dark chocolate mint',
+        flavor: 'Strawberry & Rose Milk Chocolate',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-skunk-pink',
@@ -161,7 +161,7 @@ export const useProductStore = defineStore('product', {
         id: 'lemur-bar',
         name: 'The Lemur',
         flavor: 'Peppermint and dark chocolate mint',
-        description: 'Bold and silky dark chocolate crafted for contrast lovers.',
+        description: 'Banana, Peanut Butter, & Milk Chocolate',
         price: 8.5,
         characterLogo: lemurLogo,
         borderColorClass: 'border-lemur-orange',
@@ -195,7 +195,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'cow-bar',
         name: 'The Cow',
-        flavor: 'Peppermint and dark chocolate mint',
+        flavor: 'Milk Chocolate with Salted Caramel & Vanilla',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-cow-red',
