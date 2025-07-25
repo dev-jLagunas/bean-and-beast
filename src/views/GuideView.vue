@@ -1,14 +1,19 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
+import { useProductStore } from '@/stores/productStore'
+
 //components
 import SectionTitle from '@/components/reusable/SectionTitle.vue'
 import SeeProductsBtn from '@/components/reusable/SeeProductsBtn.vue'
+import LoadingModal from '@/components/reusable/LoadingModal.vue'
+// Pinia Store
+const productsStore = useProductStore()
 
 // Reactive
 const currentIndex = ref(0)
 const userAnswers = ref([])
-
-
+const showResults = ref(false)
+const topProducts = ref([])
 
 // Images
 import pandaPeaking from '@/assets/images/section-peek-panda.png'
@@ -18,7 +23,11 @@ import cowLogo from '@/assets/images/cow-logo-reg.webp'
 import zebraLogo from '@/assets/images/zebra-logo-reg.webp'
 import pandaLogo from '@/assets/images/panda-logo-reg.webp'
 import chocoLogo from '@/assets/images/choco-logo.png'
+import loadingLogo from '@/assets/images/loading-logo.png'
+import squareLogo from '@/assets/images/square-logo-reg.svg'
 
+// Reactive
+const isLoading = ref(false)
 
 // Quiz Data
 const quizCardContent = [
@@ -82,11 +91,41 @@ const quizCardContent = [
 // Quiz logic
 function selectOption(tag) {
   userAnswers.value.push(tag)
-  currentIndex.value++
+
+  if (currentIndex.value < quizCardContent.length - 1) {
+    currentIndex.value++
+  } else {
+    isLoading.value = true
+
+    // simulate loading (e.g., 1.5s), then show results
+    setTimeout(() => {
+      generateRecommendations()
+      isLoading.value = false
+      showResults.value = true
+
+      // Scroll to results
+      nextTick(() => {
+        const resultEl = document.getElementById('quiz-results')
+        resultEl?.scrollIntoView({ behavior: 'smooth' })
+      })
+    }, 1500)
+  }
+}
+
+function generateRecommendations() {
+  const products = productsStore.products
+
+  const scored = products.map((product) => {
+    const matches = product.tags.filter((tag) => userAnswers.value.includes(tag)).length
+    return { ...product, score: matches }
+  })
+
+  topProducts.value = scored.sort((a, b) => b.score - a.score).slice(0, 3)
 }
 </script>
 
 <template>
+  <LoadingModal v-if="isLoading" :img="loadingLogo" />
   <SectionTitle
     title="Let us help you choose."
     description="Answer 5 quick questions and we'll recommend the top 3 chocolates most likely to match your taste and vibe."
@@ -95,9 +134,14 @@ function selectOption(tag) {
   />
   <section
     v-if="currentIndex < quizCardContent.length"
-    class="quiz-question mx-4 mt-8 px-8 py-16 rounded-sm max-w-[1000px] md:mx-auto"
+    class="guide-main-wrapper"
     :class="['quiz-question', quizCardContent[currentIndex].themeClass]"
   >
+    <img
+      :src="squareLogo"
+      alt="square bean and beast logo"
+      class="img-special"
+    />
     <div class="w-fit flex-start-center">
       <img
         :src="quizCardContent[currentIndex].characterLogo"
@@ -120,11 +164,22 @@ function selectOption(tag) {
       </button>
     </div>
   </section>
-  <div class="w-[70vw] mx-auto mt-8 flex flex-col items-center justify-center max-w-[500px]" >
-    <img :src="chocoLogo" alt="chocolate bars logo sillohuete" class="h-32">
-    <p class="font-main-copy">After you finish we'll tell you why we think what we chose for you reflects your flavor preferences, your aesthetic leanings, and your mood.</p>
+  <div class="guide-info-wrapper">
+    <img :src="chocoLogo" alt="chocolate bars logo sillohuete" class="h-32" />
+    <p class="font-main-copy">
+      After you finish we'll tell you why we think what we chose for you reflects your flavor
+      preferences, your aesthetic leanings, and your mood.
+    </p>
   </div>
-  <SeeProductsBtn/>
+  <SeeProductsBtn />
+  <section v-if="showResults" id="quiz-results" class="guide-results-wrapper">
+    <h2 class="font-section-title">Your Top 3 Matches</h2>
+    <div class="result-card" v-for="product in topProducts" :key="product.id">
+      <img :src="product.image" :alt="product.name" class="h-32 mb-4" />
+      <h3 class="fredo-title">{{ product.name }}</h3>
+      <p class="lato-p-light">{{ product.recommendText }}</p>
+    </div>
+  </section>
 </template>
 
 <style scoped></style>

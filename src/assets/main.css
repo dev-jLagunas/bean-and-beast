@@ -91,6 +91,10 @@ Tailwind Custom Reusable Classes
   @apply absolute h-20 -top-16 left-1/2 -translate-x-1/2;
 }
 
+.img-special {
+  @apply hidden md:block md:absolute md:-top-20 md:-right-48 md:-rotate-12 md:opacity-30;
+}
+
 /* Widths */
 .lg-max-width {
   @apply max-w-[1400px];
@@ -102,6 +106,10 @@ Tailwind Custom Reusable Classes
 }
 
 /* Font stylings */
+.lato-p-light {
+  @apply font-title font-light;
+}
+
 .fredo-p-light {
   @apply font-title font-light text-base;
 }
@@ -149,8 +157,12 @@ Tailwind Custom Reusable Classes
   @apply grid grid-cols-5 gap-4 place-items-center px-4;
 }
 
-.lato-p-light {
-  @apply font-title font-light;
+.guide-main-wrapper {
+  @apply mx-4 mt-8 px-8 py-16 rounded-sm max-w-[1000px] relative md:mx-auto overflow-hidden;
+}
+
+.guide-info-wrapper {
+  @apply w-[70vw] mx-auto mt-8 flex flex-col items-center justify-center max-w-[500px];
 }
 
 /* Tablet Nav */

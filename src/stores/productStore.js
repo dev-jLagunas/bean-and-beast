@@ -42,6 +42,7 @@ export const useProductStore = defineStore('product', {
         flavor: 'Dark chocolate with Chili and Sea Salt',
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
+        tags: ['playful', 'fruity', 'bold'],
         borderColorClass: 'border-b-zebra-cyan',
         characterLogo: zebraLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
@@ -77,7 +78,7 @@ export const useProductStore = defineStore('product', {
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-penguin-blue',
-
+        tags: ['dark', 'bold', 'elegant'],
         characterLogo: penguinLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
@@ -113,6 +114,7 @@ export const useProductStore = defineStore('product', {
         price: 8.5,
         borderColorClass: 'border-b-panda-orange',
         characterLogo: pandaLogo,
+        tags: ['myself', 'elegant', 'dark'],
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
           'Striking personality',
@@ -146,7 +148,7 @@ export const useProductStore = defineStore('product', {
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-skunk-pink',
-
+        tags: ['bold', 'dark', 'playful', 'myself'],
         characterLogo: skunkLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
@@ -180,9 +182,10 @@ export const useProductStore = defineStore('product', {
         flavor: 'Peppermint and dark chocolate mint',
         description: 'Banana, Peanut Butter, & Milk Chocolate',
         price: 8.5,
+        tags: ['chill', 'light', 'playful'],
+
         characterLogo: lemurLogo,
         borderColorClass: 'border-lemur-orange',
-
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
           'Striking personality',
@@ -216,7 +219,7 @@ export const useProductStore = defineStore('product', {
         description: 'Bold and silky dark chocolate crafted for contrast lovers.',
         price: 8.5,
         borderColorClass: 'border-b-cow-red',
-
+        tags: ['nutty', 'light', 'chill'],
         characterLogo: cowLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
