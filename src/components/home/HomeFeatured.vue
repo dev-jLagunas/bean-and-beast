@@ -32,11 +32,11 @@ function addToCart(product) {
 <template>
   <section class="gap-8 grid-two-four">
     <article v-for="product in products" :key="product.id" class="mx-4">
-      <figure class="h-24 mt-4 w-fit">
+      <figure class="h-24 mt-4 w-fit text-left">
         <img
           :src="product.characterLogo"
           :alt="`${product.name} character logo`"
-          class="img-full"
+          class="img-full block"
         />
       </figure>
 
@@ -49,18 +49,8 @@ function addToCart(product) {
         </div>
         <p class="font-main-copy">{{ product.flavor }}</p>
         <div class="two-btn-wrapper">
-          <button
-            @click="seeDetails(product.id)"
-            class="white-btn"
-          >
-            See Details
-          </button>
-          <button
-            @click="addToCart(product)"
-            class="black-btn"
-          >
-            Add to Cart
-          </button>
+          <button @click="seeDetails(product.id)" class="white-btn">See Details</button>
+          <button @click="addToCart(product)" class="black-btn">Add to Cart</button>
         </div>
       </div>
       <figure class="shadow-[5px_5px_15px_-3px_rgba(0,_0,_0,_0.15)]">

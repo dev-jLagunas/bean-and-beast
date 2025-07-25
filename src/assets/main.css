@@ -58,6 +58,10 @@ Tailwind Custom Reusable Classes
   @apply flex flex-row justify-evenly items-center;
 }
 
+.flex-start-center {
+  @apply flex flex-row justify-start items-center;
+}
+
 .flex-center-center {
   @apply flex flex-row justify-center items-center;
 }
@@ -121,12 +125,16 @@ Tailwind Custom Reusable Classes
   @apply font-title font-semibold text-lg tracking-wide text-dark-main;
 }
 
+.font-question-card {
+  @apply font-paragraph text-3xl font-light text-dark-main;
+}
+
 /* Wrappers */
 .section-wrapper {
-  @apply bg-light-muted w-full my-24 px-4 py-6 md:max-w-[600px] md:mx-auto md:px-8 md:mb-8;
+  @apply bg-light-muted w-full  px-4 py-6 md:max-w-[600px] md:mx-auto md:px-8 md:mb-8;
 }
 .two-btn-wrapper {
-  @apply grid grid-cols-2 gap-4 my-2;
+  @apply grid grid-cols-2 gap-4 my-2 max-w-[600px];
 }
 
 .home-lore-section-wrapper {
