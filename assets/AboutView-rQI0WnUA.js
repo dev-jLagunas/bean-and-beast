@@ -1,1 +1,0 @@
-import{_ as t,e as n,s as r,f as s}from"./index-CvEXLbt_.js";const i={};function a(e,c){const o=r("SectionTitle");return s(),n(o,{title:"featured",description:"Discover our most popular items. There is something for everyone. Personal or as a gift items available!",img:e.cowPeaking},null,8,["img"])}const m=t(i,[["render",a]]);export{m as default};
