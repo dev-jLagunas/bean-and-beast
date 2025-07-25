@@ -25,6 +25,14 @@ import homeLoreSkunk from '@/assets/images/tablet/home/home-lore-skunk.png'
 import homeLorePenguin from '@/assets/images/tablet/home/home-lore-penguin.png'
 import homeLoreCow from '@/assets/images/tablet/home/home-lore-cow.png'
 
+// *****MERCHANDISE IMAGES ******
+
+import miniLogo from '@/assets/images/mini-logo.svg'
+import hoodieDesignA from '@/assets/images/tablet/merch/woman-hoodie-a.webp'
+import hoodieDesignB from '@/assets/images/tablet/merch/woman-hoodie-b.webp'
+import hoodieDesignC from '@/assets/images/tablet/merch/woman-hoodie-c.webp'
+import hoodieDesignD from '@/assets/images/tablet/merch/woman-hoodie-d.webp'
+
 export const useProductStore = defineStore('product', {
   state: () => ({
     products: [
@@ -357,6 +365,144 @@ export const useProductStore = defineStore('product', {
         ],
         shortLore:
           'The Skunk moves with quiet confidence. It demands respect, not attention, and flourishes by staying authentically itself.',
+      },
+    ],
+    merchandise: [
+      {
+        id: 'hoodie-a',
+        name: 'Bean And Beast Hoodie',
+        flavor: 'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        description:
+          'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        price: 45,
+        borderColorClass: 'border-b-zebra-cyan',
+        storeLogo: miniLogo,
+        flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
+        characterProfile: [
+          'Striking personality',
+          'Confident vibe',
+          'Elegantly wild',
+          'Unapologetically bold',
+        ],
+        itemDetails: [
+          'soft, breathable cotton-blend fleece',
+          'Graphic print, signature color bars',
+          'Balanced with light vanilla undertones',
+          'Pairs well with espresso or cabernet',
+        ],
+        recommendText:
+          'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
+        images: [
+          hoodieDesignA,
+          'img-c.png',
+          'img-d.png',
+          'img-e.png',
+          'img-f.png',
+          'img-g.png',
+          'img-h.png',
+        ],
+      },
+      {
+        id: 'hoodie-b',
+        name: 'Bean And Beast Black Hoodie',
+        flavor: 'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        description:
+          'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        price: 45,
+        borderColorClass: 'border-b-zebra-cyan',
+        storeLogo: miniLogo,
+        flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
+        characterProfile: [
+          'Striking personality',
+          'Confident vibe',
+          'Elegantly wild',
+          'Unapologetically bold',
+        ],
+        itemDetails: [
+          'soft, breathable cotton-blend fleece',
+          'Graphic print, signature color bars',
+          'Balanced with light vanilla undertones',
+          'Pairs well with espresso or cabernet',
+        ],
+        recommendText:
+          'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
+        images: [
+          hoodieDesignB,
+          'img-c.png',
+          'img-d.png',
+          'img-e.png',
+          'img-f.png',
+          'img-g.png',
+          'img-h.png',
+        ],
+      },
+      {
+        id: 'hoodie-c',
+        name: 'Bean And Beast Hoodie',
+        flavor: 'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        description:
+          'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        price: 45,
+        borderColorClass: 'border-b-zebra-cyan',
+        storeLogo: miniLogo,
+        flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
+        characterProfile: [
+          'Striking personality',
+          'Confident vibe',
+          'Elegantly wild',
+          'Unapologetically bold',
+        ],
+        itemDetails: [
+          'soft, breathable cotton-blend fleece',
+          'Graphic print, signature color bars',
+          'Balanced with light vanilla undertones',
+          'Pairs well with espresso or cabernet',
+        ],
+        recommendText:
+          'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
+        images: [
+          hoodieDesignC,
+          'img-c.png',
+          'img-d.png',
+          'img-e.png',
+          'img-f.png',
+          'img-g.png',
+          'img-h.png',
+        ],
+      },
+      {
+        id: 'hoodie-d',
+        name: 'Bean And Beast Art Hoodie',
+        flavor: 'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        description:
+          'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        price: 50,
+        borderColorClass: 'border-b-zebra-cyan',
+        storeLogo: miniLogo,
+        flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
+        characterProfile: [
+          'Striking personality',
+          'Confident vibe',
+          'Elegantly wild',
+          'Unapologetically bold',
+        ],
+        itemDetails: [
+          'soft, breathable cotton-blend fleece',
+          'Graphic print, signature color bars',
+          'Balanced with light vanilla undertones',
+          'Pairs well with espresso or cabernet',
+        ],
+        recommendText:
+          'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
+        images: [
+          hoodieDesignD,
+          'img-c.png',
+          'img-d.png',
+          'img-e.png',
+          'img-f.png',
+          'img-g.png',
+          'img-h.png',
+        ],
       },
     ],
   }),

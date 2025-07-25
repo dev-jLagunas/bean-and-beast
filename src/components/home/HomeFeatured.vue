@@ -2,6 +2,7 @@
 import { useProductStore } from '@/stores/productStore'
 import { ref, onMounted } from 'vue'
 
+// Pinia Store
 const store = useProductStore()
 const products = ref([])
 

@@ -83,6 +83,10 @@ Tailwind Custom Reusable Classes
   @apply h-full w-full object-cover;
 }
 
+.img-peek {
+  @apply absolute h-20 -top-16 left-1/2 -translate-x-1/2;
+}
+
 /* Widths */
 .lg-max-width {
   @apply max-w-[1400px];
@@ -119,14 +123,18 @@ Tailwind Custom Reusable Classes
 
 /* Wrappers */
 .section-wrapper {
-  @apply bg-light-muted w-full mt-16 px-4 py-6 md:max-w-[600px] md:mx-auto md:px-8 md:mb-8;
+  @apply bg-light-muted w-full my-24 px-4 py-6 md:max-w-[600px] md:mx-auto md:px-8 md:mb-8;
 }
 .two-btn-wrapper {
   @apply grid grid-cols-2 gap-4 my-2;
 }
 
 .home-lore-section-wrapper {
- @apply mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-4 md:mt-16
+  @apply mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-4 md:mt-16;
+}
+
+.home-merch-section-wrapper {
+  @apply mx-4 md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-4 md:mt-16;
 }
 
 .home-lore-card-wrapper {
