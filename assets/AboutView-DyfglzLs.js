@@ -1,0 +1,1 @@
+import{_ as t,e as n,v as r,f as i}from"./index-CqAhVyxL.js";const s={};function a(e,c){const o=r("SectionTitle");return i(),n(o,{title:"featured",description:"Discover our most popular items. There is something for everyone. Personal or as a gift items available!",img:e.cowPeaking},null,8,["img"])}const m=t(s,[["render",a]]);export{m as default};
