@@ -95,6 +95,10 @@ Tailwind Custom Reusable Classes
   @apply hidden md:block md:absolute md:-top-20 md:-right-48 md:-rotate-12 md:opacity-30;
 }
 
+.img-product-seperator {
+  @apply h-50 mx-auto my-10;
+}
+
 /* Widths */
 .lg-max-width {
   @apply max-w-[1400px];
@@ -166,11 +170,19 @@ Tailwind Custom Reusable Classes
 }
 
 .top-three-wrapper {
-  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3
+  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3;
 }
 
 .product-section-wrapper {
-  @apply border-b-4 border-double border-b-light-muted mx-4
+  @apply border-b-4 border-double border-b-light-muted mx-4;
+}
+
+.product-filter-btn-wrapper {
+  @apply px-4 gap-10 -mt-10 mb-20 z-50;
+}
+
+.product-items-display-wrapper {
+  @apply md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3;
 }
 
 /* Tablet Nav */

@@ -498,15 +498,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          hoodieDesignA,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [hoodieDesignA],
       },
       {
         id: 'hoodie-b',
@@ -534,15 +526,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          hoodieDesignB,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [hoodieDesignB],
       },
       {
         id: 'hoodie-c',
@@ -570,15 +554,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          hoodieDesignC,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [hoodieDesignC],
       },
       {
         id: 'hoodie-d',
@@ -606,15 +582,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [
-          hoodieDesignD,
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
-        ],
+        images: [hoodieDesignD],
       },
     ],
   }),

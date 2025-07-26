@@ -208,7 +208,7 @@ const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
     <div>
       <SectionTitle
         title="we also have sets"
-        description="Based on your answer we think you'll love the following choices. How did we do?"
+        description="If you can't decide, we also have sets ready to go!"
         :img="zebraPeaking"
         customClass="mt-48 mb-8"
       />
