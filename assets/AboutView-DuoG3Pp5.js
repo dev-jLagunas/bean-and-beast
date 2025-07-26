@@ -1,0 +1,1 @@
+import{_ as t,c as i,i as n,o as r}from"./index-CGHDqEnq.js";const s={};function c(e,a){const o=n("SectionTitle");return r(),i(o,{title:"featured",description:"Discover our most popular items. There is something for everyone. Personal or as a gift items available!",img:e.cowPeaking},null,8,["img"])}const m=t(s,[["render",c]]);export{m as default};
