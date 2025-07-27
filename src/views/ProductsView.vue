@@ -73,13 +73,13 @@ function addToCart(product) {
       Merch
     </button>
   </div>
-  <section v-if="selectedCategory === 'all' || selectedCategory === 'set'">
+  <section v-if="selectedCategory === 'all' || selectedCategory === 'set'" class="text-main-dark">
     <header class="product-section-wrapper">
       <h3 class="font-section-title">Chocolate Sets</h3>
       <p class="font-main-copy pb-2">Perfect for gifts or if you're just really hungry!</p>
     </header>
     <div class="product-items-display-wrapper">
-      <article v-for="product in setProducts" :key="product.id" class="mt-4 md:px-4">
+      <article v-for="product in setProducts" :key="product.id" class="my-12 md:px-4">
         <div class="flex-between-center px-4 md:px-0">
           <h3 class="fredo-title">{{ product.name }}</h3>
           <p class="font-price">${{ product.price.toFixed(2) }}</p>
@@ -175,7 +175,7 @@ function addToCart(product) {
           :loop="true"
           :autoplay="{ delay: 4000, disableOnInteraction: false }"
           :modules="[Autoplay]"
-          class="my-4"
+          class="my-4 z-10"
         >
           <SwiperSlide v-for="(img, i) in product.images" :key="i">
             <img

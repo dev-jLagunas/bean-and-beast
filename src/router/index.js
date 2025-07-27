@@ -28,7 +28,28 @@ const router = createRouter({
       name: 'Products',
       component: () => import('@/views/ProductsView.vue'),
     },
+    {
+      path: '/products/:id',
+      name: 'Product Details',
+      component: () => import('@/views/ProductsDetailsView.vue'),
+    },
   ],
+
+  scrollBehavior(to, from, savedPosition) {
+    // 1. Restore scroll on back/forward
+    if (savedPosition) return savedPosition
+
+    // 2. Scroll to anchor/hash if defined (e.g., #case-studies)
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+
+    // 3. Default: always scroll to top
+    return { top: 0 }
+  },
 })
 
 export default router

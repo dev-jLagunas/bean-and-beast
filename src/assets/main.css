@@ -11,6 +11,7 @@ Global Styles
 
 body {
   margin-bottom: 10rem;
+  color: #333;
 }
 
 /***************************************
@@ -200,7 +201,7 @@ Tailwind Custom Reusable Classes
 
 /* Footer Nav */
 .footer-nav {
-  @apply fixed bottom-0 w-full md:hidden;
+  @apply fixed bottom-0 w-full md:hidden z-50;
 }
 
 .footer-nav-wrapper {
@@ -217,7 +218,7 @@ Tailwind Custom Reusable Classes
 }
 
 .black-btn {
-  @apply bg-dark-main px-2 py-1 text-light-main font-semibold rounded-xs hover:bg-muted hover:text-light-main hover:cursor-pointer  transition-all duration-200 ease-in-out;
+  @apply bg-dark-main px-2 py-1 text-light-main font-semibold rounded-xs hover:bg-zebra-red hover:text-light-main hover:cursor-pointer  transition-all duration-200 ease-in-out;
 }
 
 .all-products-btn {

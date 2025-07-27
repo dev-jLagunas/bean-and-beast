@@ -33,7 +33,7 @@ import flatLogo from '@/assets/images/mobile/flat-logo.svg'
 <style scoped>
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
 }
 
 .page-enter-from,
