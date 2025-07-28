@@ -1,1 +1,0 @@
-import{_ as t,c as n,j as r,o as i}from"./index-Cv-UxAt5.js";const s={};function c(e,a){const o=r("SectionTitle");return i(),n(o,{title:"featured",description:"Discover our most popular items. There is something for everyone. Personal or as a gift items available!",img:e.cowPeaking},null,8,["img"])}const m=t(s,[["render",c]]);export{m as default};
