@@ -28,13 +28,6 @@ const singleProducts = computed(() => productsStore.products.filter((p) => p.cat
 const merchProducts = computed(() =>
   productsStore.merchandise.filter((p) => p.category === 'merch'),
 )
-
-function seeDetails(id) {
-  console.log('See details for', id)
-}
-function addToCart(product) {
-  console.log('Add to cart', product.name)
-}
 </script>
 
 <template>

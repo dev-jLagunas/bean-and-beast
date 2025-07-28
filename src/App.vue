@@ -8,15 +8,18 @@ import flatLogo from '@/assets/images/mobile/flat-logo.svg'
 
 <template>
   <!-- Mobile Logo -->
-  <figure>
-    <img
-      :src="flatLogo"
-      width="700"
-      height="200"
-      alt="Bean and Beast logo"
-      class="w-full md:hidden"
-    />
-  </figure>
+  <RouterLink to="/">
+    <figure>
+      <img
+        :src="flatLogo"
+        width="700"
+        height="200"
+        alt="Bean and Beast logo"
+        class="w-full md:hidden"
+      />
+    </figure>
+  </RouterLink>
+
   <!-- 768px + Nav -->
   <TheTabletNavbar />
   <main>

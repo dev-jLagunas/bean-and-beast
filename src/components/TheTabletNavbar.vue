@@ -10,10 +10,11 @@ const route = useRoute()
 
 <template>
   <nav class="tablet-nav inline-reg lg-max-width">
-    <figure>
-      <img :src="flatLogo" alt="" />
-    </figure>
-    <ul class="tablet-nav-wrapper flex-evenly-center fredo-p-light ">
+    <router-link to="/"
+      ><figure>
+        <img :src="flatLogo" alt="" /></figure
+    ></router-link>
+    <ul class="tablet-nav-wrapper flex-evenly-center fredo-p-light">
       <li class="tablet-nav-item">
         <router-link to="/products" aria-label="Products">
           <i

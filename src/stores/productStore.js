@@ -19,7 +19,6 @@ import pandaSingleWhite from '@/assets/images/tablet/products/panda-single-white
 import pandaCollage from '@/assets/images/tablet/products/panda-collage.webp'
 import skunkSingleWhite from '@/assets/images/tablet/products/skunk-single-white.webp'
 import skunkCollage from '@/assets/images/tablet/products/skunk-collage.webp'
-
 import skunkSingleColor from '@/assets/images/tablet/home/skunk-single-md.webp'
 import cowSingleColor from '@/assets/images/tablet/home/cow-single-md.webp'
 import cowSingleWhite from '@/assets/images/tablet/products/cow-single-white.webp'
@@ -27,7 +26,6 @@ import cowCollage from '@/assets/images/tablet/products/cow-collage.webp'
 import penguinSingleColor from '@/assets/images/tablet/home/penguin-single-md.webp'
 import penguinSingleWhite from '@/assets/images/tablet/products/penguin-single-white.webp'
 import penguinCollage from '@/assets/images/tablet/products/penguin-collage.webp'
-
 import lemurSingleColor from '@/assets/images/tablet/home/lemur-single-md.webp'
 import lemurSingleWhite from '@/assets/images/tablet/products/lemur-single-white.webp'
 import lemurCollage from '@/assets/images/tablet/products/penguin-collage.webp'
@@ -43,7 +41,6 @@ import twoShotZebra from '@/assets/images/tablet/guide/zebra-two-shot.webp'
 // *****SET IMAGES******
 import giftBoxMint from '@/assets/images/tablet/guide/gift-box-mint.webp'
 import giftBoxPurple from '@/assets/images/tablet/products/gift-box-purple.webp'
-
 import giftBoxPink from '@/assets/images/tablet/guide/gift-box-pink.webp'
 import threePackA from '@/assets/images/tablet/products/three-pack-set-a.webp'
 import threePackB from '@/assets/images/tablet/products/three-pack-set-b.webp'
@@ -66,12 +63,26 @@ import homeLorePenguin from '@/assets/images/tablet/home/home-lore-penguin.png'
 import homeLoreCow from '@/assets/images/tablet/home/home-lore-cow.png'
 
 // *****MERCHANDISE IMAGES ******
-
 import miniLogo from '@/assets/images/mini-logo.svg'
 import hoodieDesignA from '@/assets/images/tablet/merch/woman-hoodie-a.webp'
 import hoodieDesignB from '@/assets/images/tablet/merch/woman-hoodie-b.webp'
 import hoodieDesignC from '@/assets/images/tablet/merch/woman-hoodie-c.webp'
 import hoodieDesignD from '@/assets/images/tablet/merch/woman-hoodie-d.webp'
+
+// ***** ABOUT PAGE IMAGES ******
+import zebraGif from "@/assets/images/tablet/about/zebra-gif.gif"
+import lemurGif from "@/assets/images/tablet/about/lemur-gif.gif"
+import pandaGif from "@/assets/images/tablet/about/panda-gif.gif"
+import penguinGif from "@/assets/images/tablet/about/penguin-gif.gif"
+import skunkGif from "@/assets/images/tablet/about/skunk-gif.gif"
+import cowGif from "@/assets/images/tablet/about/cow-gif.gif"
+import cowProgression from "@/assets/images/tablet/about/cow-progression.png"
+import lemurProgression from "@/assets/images/tablet/about/lemur-progression.png"
+import pandaProgression from "@/assets/images/tablet/about/panda-progression.png"
+import penguinProgression from "@/assets/images/tablet/about/penguin-progression.png"
+import skunkProgression from "@/assets/images/tablet/about/skunk-progression.png"
+import zebraProgression from "@/assets/images/tablet/about/zebra-progression.png"
+
 
 export const useProductStore = defineStore('product', {
   state: () => ({
@@ -352,7 +363,7 @@ export const useProductStore = defineStore('product', {
     ],
     animalLore: [
       {
-        id: 'zebra-bar',
+        id: 'zebra-lore',
         animalName: 'The Zebra',
         deepStory:
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
@@ -360,19 +371,15 @@ export const useProductStore = defineStore('product', {
         animalLogo: zebraLogo,
         images: [
           homeLoreZebra,
-          'img-b.png',
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
+          zebraGif,
+          zebraProgression,
+          zebraSingleColor
         ],
         shortLore:
           'The Zebra is your confident guide. The Zebra is equal parts grace and defiance.',
       },
       {
-        id: 'cow-bar',
+        id: 'cow-lore',
         animalName: 'The Cow',
         deepStory:
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
@@ -380,19 +387,15 @@ export const useProductStore = defineStore('product', {
         animalLogo: zebraLogo,
         images: [
           homeLoreCow,
-          'img-b.png',
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
+          cowGif,
+          cowProgression,
+          cowSingleColor
         ],
         shortLore:
           'The Cow is steady and nurturing. Grounded in tradition, it offers calm in a fast-moving world.',
       },
       {
-        id: 'penguin-bar',
+        id: 'penguin-lore',
         animalName: 'The Penguin',
         deepStory:
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
@@ -400,19 +403,15 @@ export const useProductStore = defineStore('product', {
         animalLogo: zebraLogo,
         images: [
           homeLorePenguin,
-          'img-b.png',
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
+          penguinGif,
+          penguinProgression,
+          penguinSingleColor
         ],
         shortLore:
           'The Penguin thrives in extremes. Loyal and adaptable, it finds unity and warmth even in the coldest moments.',
       },
       {
-        id: 'lemur-bar',
+        id: 'lemur-lore',
         animalName: 'The Lemur',
         deepStory:
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
@@ -420,19 +419,15 @@ export const useProductStore = defineStore('product', {
         animalLogo: zebraLogo,
         images: [
           homeLoreLemur,
-          'img-b.png',
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
+          lemurGif,
+          lemurProgression,
+          lemurSingleColor
         ],
         shortLore:
           'The Lemur is playful but sharp. Curious and nimble, it thrives on connection and instinctive choices.',
       },
       {
-        id: 'panda-bar',
+        id: 'panda-lore',
         animalName: 'The Panda',
         deepStory:
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
@@ -440,19 +435,15 @@ export const useProductStore = defineStore('product', {
         animalLogo: zebraLogo,
         images: [
           homeLorePanda,
-          'img-b.png',
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
+          pandaGif,
+          pandaProgression,
+          penguinSingleColor
         ],
         shortLore:
           'The Panda embodies peaceful strength. It lives slowly, choosing joy and balance over speed and pressure.',
       },
       {
-        id: 'skunk-bar',
+        id: 'skunk-lore',
         animalName: 'The Skunk',
         deepStory:
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
@@ -460,13 +451,9 @@ export const useProductStore = defineStore('product', {
         animalLogo: zebraLogo,
         images: [
           homeLoreSkunk,
-          'img-b.png',
-          'img-c.png',
-          'img-d.png',
-          'img-e.png',
-          'img-f.png',
-          'img-g.png',
-          'img-h.png',
+          skunkGif,
+          skunkProgression,
+          skunkSingleColor
         ],
         shortLore:
           'The Skunk moves with quiet confidence. It demands respect, not attention, and flourishes by staying authentically itself.',
