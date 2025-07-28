@@ -56,7 +56,7 @@ const cartItems = computed(() => cartStore.cartItems)
     title="Here is your cart."
     description="Ready to buy?"
     :img="lemurPeeking"
-    custom-class="mt-5 mb-2"
+    custom-class="mt-15 mb-2"
   />
 
   <div class="two-btn-wrapper mx-auto px-4">

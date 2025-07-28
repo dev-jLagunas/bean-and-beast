@@ -238,7 +238,7 @@ Tailwind Custom Reusable Classes
 
 /* Labels & Inputs */
 .input-label {
-  @apply text-light-main bg-dark-main font-title tracking-wide px-2 w-28 rounded-l-sm text-center;
+  @apply text-light-main bg-dark-main font-title tracking-wide px-2 w-34 rounded-l-sm text-center;
 }
 
 .input-container {
