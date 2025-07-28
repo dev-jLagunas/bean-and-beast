@@ -70,19 +70,18 @@ import hoodieDesignC from '@/assets/images/tablet/merch/woman-hoodie-c.webp'
 import hoodieDesignD from '@/assets/images/tablet/merch/woman-hoodie-d.webp'
 
 // ***** ABOUT PAGE IMAGES ******
-import zebraGif from "@/assets/images/tablet/about/zebra-gif.gif"
-import lemurGif from "@/assets/images/tablet/about/lemur-gif.gif"
-import pandaGif from "@/assets/images/tablet/about/panda-gif.gif"
-import penguinGif from "@/assets/images/tablet/about/penguin-gif.gif"
-import skunkGif from "@/assets/images/tablet/about/skunk-gif.gif"
-import cowGif from "@/assets/images/tablet/about/cow-gif.gif"
-import cowProgression from "@/assets/images/tablet/about/cow-progression.png"
-import lemurProgression from "@/assets/images/tablet/about/lemur-progression.png"
-import pandaProgression from "@/assets/images/tablet/about/panda-progression.png"
-import penguinProgression from "@/assets/images/tablet/about/penguin-progression.png"
-import skunkProgression from "@/assets/images/tablet/about/skunk-progression.png"
-import zebraProgression from "@/assets/images/tablet/about/zebra-progression.png"
-
+import zebraGif from '@/assets/images/tablet/about/zebra-gif.gif'
+import lemurGif from '@/assets/images/tablet/about/lemur-gif.gif'
+import pandaGif from '@/assets/images/tablet/about/panda-gif.gif'
+import penguinGif from '@/assets/images/tablet/about/penguin-gif.gif'
+import skunkGif from '@/assets/images/tablet/about/skunk-gif.gif'
+import cowGif from '@/assets/images/tablet/about/cow-gif.gif'
+import cowProgression from '@/assets/images/tablet/about/cow-progression.png'
+import lemurProgression from '@/assets/images/tablet/about/lemur-progression.png'
+import pandaProgression from '@/assets/images/tablet/about/panda-progression.png'
+import penguinProgression from '@/assets/images/tablet/about/penguin-progression.png'
+import skunkProgression from '@/assets/images/tablet/about/skunk-progression.png'
+import zebraProgression from '@/assets/images/tablet/about/zebra-progression.png'
 
 export const useProductStore = defineStore('product', {
   state: () => ({
@@ -369,12 +368,7 @@ export const useProductStore = defineStore('product', {
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
         traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
         animalLogo: zebraLogo,
-        images: [
-          homeLoreZebra,
-          zebraGif,
-          zebraProgression,
-          zebraSingleColor
-        ],
+        images: [homeLoreZebra, zebraGif, zebraProgression, zebraSingleColor],
         shortLore:
           'The Zebra is your confident guide. The Zebra is equal parts grace and defiance.',
       },
@@ -385,12 +379,7 @@ export const useProductStore = defineStore('product', {
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
         traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
         animalLogo: zebraLogo,
-        images: [
-          homeLoreCow,
-          cowGif,
-          cowProgression,
-          cowSingleColor
-        ],
+        images: [homeLoreCow, cowGif, cowProgression, cowSingleColor],
         shortLore:
           'The Cow is steady and nurturing. Grounded in tradition, it offers calm in a fast-moving world.',
       },
@@ -401,12 +390,7 @@ export const useProductStore = defineStore('product', {
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
         traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
         animalLogo: zebraLogo,
-        images: [
-          homeLorePenguin,
-          penguinGif,
-          penguinProgression,
-          penguinSingleColor
-        ],
+        images: [homeLorePenguin, penguinGif, penguinProgression, penguinSingleColor],
         shortLore:
           'The Penguin thrives in extremes. Loyal and adaptable, it finds unity and warmth even in the coldest moments.',
       },
@@ -417,12 +401,7 @@ export const useProductStore = defineStore('product', {
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
         traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
         animalLogo: zebraLogo,
-        images: [
-          homeLoreLemur,
-          lemurGif,
-          lemurProgression,
-          lemurSingleColor
-        ],
+        images: [homeLoreLemur, lemurGif, lemurProgression, lemurSingleColor],
         shortLore:
           'The Lemur is playful but sharp. Curious and nimble, it thrives on connection and instinctive choices.',
       },
@@ -433,12 +412,7 @@ export const useProductStore = defineStore('product', {
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
         traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
         animalLogo: zebraLogo,
-        images: [
-          homeLorePanda,
-          pandaGif,
-          pandaProgression,
-          penguinSingleColor
-        ],
+        images: [homeLorePanda, pandaGif, pandaProgression, pandaSingleColor],
         shortLore:
           'The Panda embodies peaceful strength. It lives slowly, choosing joy and balance over speed and pressure.',
       },
@@ -449,12 +423,7 @@ export const useProductStore = defineStore('product', {
           'The zebra lives in stark contrast — thriving in balance, blending with none, and standing proudly alone. It represents clarity in complexity, and finds strength in duality. Its stride is measured, confident, and always forward.',
         traits: ['Proud', 'Composed', 'Loyal', 'Visually bold'],
         animalLogo: zebraLogo,
-        images: [
-          homeLoreSkunk,
-          skunkGif,
-          skunkProgression,
-          skunkSingleColor
-        ],
+        images: [homeLoreSkunk, skunkGif, skunkProgression, skunkSingleColor],
         shortLore:
           'The Skunk moves with quiet confidence. It demands respect, not attention, and flourishes by staying authentically itself.',
       },
