@@ -6,6 +6,8 @@ import { useProductStore } from '@/stores/productStore'
 import SectionTitle from '@/components/reusable/SectionTitle.vue'
 import SeeProductsBtn from '@/components/reusable/SeeProductsBtn.vue'
 import LoadingModal from '@/components/reusable/LoadingModal.vue'
+import SeeDetailsBtn from '@/components/reusable/SeeDetailsBtn.vue'
+
 // Pinia Store
 const productsStore = useProductStore()
 
@@ -199,7 +201,7 @@ const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
         </figure>
         <p class="font-main-copy mt-2">{{ product.recommendText }}</p>
         <div class="two-btn-wrapper">
-          <button class="white-btn">See Details</button>
+          <SeeDetailsBtn :productId="product.id" />
           <button class="black-btn">Add to Cart</button>
         </div>
       </div>
@@ -232,7 +234,7 @@ const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
         </figure>
         <p class="font-main-copy mt-2">{{ fourBarSet.recommendText }}</p>
         <div class="two-btn-wrapper">
-          <button class="white-btn">See Details</button>
+          <SeeDetailsBtn :productId="fourBarSet.id" />
           <button class="black-btn">Add to Cart</button>
         </div>
       </article>
@@ -254,7 +256,7 @@ const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
         </figure>
         <p class="font-main-copy mt-2">{{ sixBarSet.recommendText }}</p>
         <div class="two-btn-wrapper">
-          <button class="white-btn">See Details</button>
+          <SeeDetailsBtn :productId="sixBarSet.id" />
           <button class="black-btn">Add to Cart</button>
         </div>
       </article>

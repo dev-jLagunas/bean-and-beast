@@ -64,7 +64,7 @@ function goBack() {
           with a longer explanation.
         </p>
         <div class="flex-center-center gap-4 mt-8">
-          <button @click="goBack" aria-label="Go back">
+          <button @click="goBack" aria-label="Go back" class="hover:cursor-pointer">
             <i class="fa-solid fa-arrow-left"></i>
           </button>
           <button class="white-btn">See Lore</button>

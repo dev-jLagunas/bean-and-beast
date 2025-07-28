@@ -1,6 +1,7 @@
 <script setup>
 import { useProductStore } from '@/stores/productStore'
 import { computed } from 'vue'
+import SeeDetailsBtn from '../reusable/SeeDetailsBtn.vue'
 
 // pinia store
 const store = useProductStore()
@@ -32,7 +33,7 @@ const merchandise = computed(() => store.merchandise)
         <img :src="merch.images[0]" alt="merchandise image" />
       </figure>
       <div class="two-btn-wrapper">
-        <button class="white-btn">See Details</button>
+        <SeeDetailsBtn :productId="merch.id" />
         <button class="black-btn">Add to Cart</button>
       </div>
     </article>

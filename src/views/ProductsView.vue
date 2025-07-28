@@ -2,6 +2,10 @@
 import { computed, ref } from 'vue'
 import { useProductStore } from '@/stores/productStore'
 
+// Components
+import SectionTitle from '@/components/reusable/SectionTitle.vue'
+import SeeDetailsBtn from '@/components/reusable/SeeDetailsBtn.vue'
+
 // Reactive
 const selectedCategory = ref('all')
 
@@ -13,9 +17,6 @@ import 'swiper/css/navigation'
 
 // Store
 const productsStore = useProductStore()
-
-// Components
-import SectionTitle from '@/components/reusable/SectionTitle.vue'
 
 // Images
 import peekPenguin from '@/assets/images/section-peek-penguin.png'
@@ -102,7 +103,7 @@ function addToCart(product) {
         </Swiper>
 
         <div class="two-btn-wrapper">
-          <button class="white-btn" @click="seeDetails(product.id)">See Details</button>
+          <SeeDetailsBtn :productId="product.id" />
           <button class="black-btn" @click="addToCart(product)">Add to Cart</button>
         </div>
       </article>
@@ -146,7 +147,7 @@ function addToCart(product) {
         </Swiper>
 
         <div class="two-btn-wrapper">
-          <button class="white-btn" @click="seeDetails(product.id)">See Details</button>
+          <SeeDetailsBtn :productId="product.id" />
           <button class="black-btn" @click="addToCart(product)">Add to Cart</button>
         </div>
       </article>
@@ -187,7 +188,7 @@ function addToCart(product) {
         </Swiper>
 
         <div class="two-btn-wrapper">
-          <button class="white-btn" @click="seeDetails(product.id)">See Details</button>
+          <SeeDetailsBtn :productId="product.id" />
           <button class="black-btn" @click="addToCart(product)">Add to Cart</button>
         </div>
       </article>
