@@ -1,6 +1,8 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useProductStore } from '@/stores/productStore'
+import { useCartStore } from '@/stores/cartStore'
+const cartStore = useCartStore()
 
 // Components
 import SectionTitle from '@/components/reusable/SectionTitle.vue'
@@ -97,7 +99,7 @@ const merchProducts = computed(() =>
 
         <div class="two-btn-wrapper">
           <SeeDetailsBtn :productId="product.id" />
-          <button class="black-btn" @click="addToCart(product)">Add to Cart</button>
+          <button class="black-btn" @click="cartStore.openModal(product)">Add to Cart</button>
         </div>
       </article>
     </div>
@@ -141,7 +143,7 @@ const merchProducts = computed(() =>
 
         <div class="two-btn-wrapper">
           <SeeDetailsBtn :productId="product.id" />
-          <button class="black-btn" @click="addToCart(product)">Add to Cart</button>
+          <button class="black-btn" @click="cartStore.openModal(product)">Add to Cart</button>
         </div>
       </article>
     </div>
@@ -182,7 +184,7 @@ const merchProducts = computed(() =>
 
         <div class="two-btn-wrapper">
           <SeeDetailsBtn :productId="product.id" />
-          <button class="black-btn" @click="addToCart(product)">Add to Cart</button>
+          <button class="black-btn" @click="cartStore.openModal(product)">Add to Cart</button>
         </div>
       </article>
     </div>

@@ -1,5 +1,7 @@
 <script setup>
 import { useRoute } from 'vue-router'
+import { useCartStore } from '@/stores/cartStore'
+const cartStore = useCartStore()
 
 // Router
 const route = useRoute()
@@ -37,7 +39,13 @@ const route = useRoute()
           ></i>
         </router-link>
       </li>
-      <li>
+      <li class="relative">
+        <span
+          v-if="cartStore.totalItems > 0"
+          class="absolute -top-5 -right-4 bg-accent text-zebra-red text-2xl font-bold px-2 py-0.5 rounded-full"
+        >
+          {{ cartStore.totalItems }}
+        </span>
         <router-link to="/cart" aria-label="Cart">
           <i
             class="fas fa-shopping-cart footer-icon"

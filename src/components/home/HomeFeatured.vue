@@ -2,6 +2,8 @@
 import { useProductStore } from '@/stores/productStore'
 import { ref, onMounted } from 'vue'
 import SeeDetailsBtn from '../reusable/SeeDetailsBtn.vue'
+import { useCartStore } from '@/stores/cartStore'
+const cartStore = useCartStore()
 
 // Store
 const store = useProductStore()
@@ -40,7 +42,7 @@ onMounted(() => {
         <p class="font-main-copy">{{ product.flavor }}</p>
         <div class="two-btn-wrapper">
           <SeeDetailsBtn :productId="product.id" />
-          <button class="black-btn">Add to Cart</button>
+          <button class="black-btn" @click="cartStore.openModal(product)">Add to Cart</button>
         </div>
       </div>
       <figure class="shadow-[5px_5px_15px_-3px_rgba(0,_0,_0,_0.15)]">

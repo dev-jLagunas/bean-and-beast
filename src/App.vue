@@ -1,7 +1,11 @@
 <script setup>
+import { useCartStore } from './stores/cartStore'
+const cartStore = useCartStore()
+
 // Components
 import TheMobileNavbar from './components/TheMobileNavbar.vue'
 import TheTabletNavbar from './components/TheTabletNavbar.vue'
+import CartModal from './components/reusable/CartModal.vue'
 // Images
 import flatLogo from '@/assets/images/mobile/flat-logo.svg'
 </script>
@@ -31,6 +35,7 @@ import flatLogo from '@/assets/images/mobile/flat-logo.svg'
   </main>
   <!-- 768px - Nav -->
   <TheMobileNavbar />
+  <CartModal v-if="cartStore.showCartModal" />
 </template>
 
 <style scoped>

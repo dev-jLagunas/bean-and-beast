@@ -1,6 +1,8 @@
 <script setup>
 import { ref, nextTick } from 'vue'
 import { useProductStore } from '@/stores/productStore'
+import { useCartStore } from '@/stores/cartStore'
+const cartStore = useCartStore()
 
 //components
 import SectionTitle from '@/components/reusable/SectionTitle.vue'
@@ -202,7 +204,7 @@ const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
         <p class="font-main-copy mt-2">{{ product.recommendText }}</p>
         <div class="two-btn-wrapper">
           <SeeDetailsBtn :productId="product.id" />
-          <button class="black-btn">Add to Cart</button>
+          <button class="black-btn" @click="cartStore.openModal(product)">Add to Cart</button>
         </div>
       </div>
     </article>
@@ -235,7 +237,7 @@ const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
         <p class="font-main-copy mt-2">{{ fourBarSet.recommendText }}</p>
         <div class="two-btn-wrapper">
           <SeeDetailsBtn :productId="fourBarSet.id" />
-          <button class="black-btn">Add to Cart</button>
+          <button class="black-btn" @click="cartStore.openModal(fourBarSet)">Add to Cart</button>
         </div>
       </article>
       <article class="mx-4">
@@ -257,7 +259,7 @@ const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
         <p class="font-main-copy mt-2">{{ sixBarSet.recommendText }}</p>
         <div class="two-btn-wrapper">
           <SeeDetailsBtn :productId="sixBarSet.id" />
-          <button class="black-btn">Add to Cart</button>
+          <button class="black-btn" @click="cartStore.openModal(sixBarSet)">Add to Cart</button>
         </div>
       </article>
     </section>
