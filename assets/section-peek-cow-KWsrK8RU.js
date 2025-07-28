@@ -1,1 +1,0 @@
-import{k as s}from"./index-BvwFYjrM.js";function n(){const e=s();function t(o){e.push({name:"Story Details",params:{id:o}})}return{goToStoryDetails:t}}const r="/bean-and-beast/assets/section-peek-cow-B-shKqD-.png";export{r as c,n as u};
