@@ -1,5 +1,7 @@
 <script setup>
 import { useRoute } from 'vue-router'
+import { useCartStore } from '@/stores/cartStore'
+const cartStore = useCartStore()
 
 // Images
 import flatLogo from '@/assets/images/mobile/flat-logo.svg'
@@ -48,7 +50,13 @@ const route = useRoute()
           <p>Guide</p>
         </router-link>
       </li>
-      <li class="tablet-nav-item">
+      <li class="tablet-nav-item relative">
+        <span
+          v-if="cartStore.totalItems > 0"
+          class="absolute -top-5 -right-3 bg-accent text-zebra-red text-xl font-bold px-2 py-0.5 rounded-full"
+        >
+          {{ cartStore.totalItems }}
+        </span>
         <router-link to="/cart" aria-label="Cart">
           <i
             class="fas fa-shopping-cart tablet-icon"

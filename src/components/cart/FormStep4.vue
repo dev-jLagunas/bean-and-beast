@@ -10,6 +10,6 @@ import zebraArt from '@/assets/images/zebra-art.jpg'
     <p class="font-main-copy mb-4">
       Your order has been received. We hope you enjoy your chocolate and visit us again soon.
     </p>
-    <button class="black-btn mt-4" @click="$emit('reset')">Return to Shop</button>
+    <router-link to="/"><button class="black-btn mt-4">Return to Shop</button></router-link>
   </section>
 </template>

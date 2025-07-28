@@ -4,24 +4,26 @@ import { useRoute } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useProductStore } from '@/stores/productStore'
 import { useCartStore } from '@/stores/cartStore'
+
 const cartStore = useCartStore()
-
-// components
-import SectionTitle from '@/components/reusable/SectionTitle.vue'
-import SeeProductsBtn from '@/components/reusable/SeeProductsBtn.vue'
-
-// Get ID from route
 const route = useRoute()
 const storyId = route.params.id
 
-// images
-import penguinPeeking from '@/assets/images/section-peek-penguin.png'
+// Store refs
+const { animalLore, products } = storeToRefs(useProductStore())
 
-// Access animal lore from store
-const { animalLore } = storeToRefs(useProductStore())
-
-// Find matching lore object
+// Get the current lore story
 const story = computed(() => animalLore.value.find((item) => item.id === storyId))
+
+// Get the linked product based on productId from story
+const product = computed(() => products.value.find((p) => p.id === story.value?.productId))
+
+// Components
+import SectionTitle from '@/components/reusable/SectionTitle.vue'
+import SeeProductsBtn from '@/components/reusable/SeeProductsBtn.vue'
+
+// Images
+import penguinPeeking from '@/assets/images/section-peek-penguin.png'
 </script>
 
 <template>
@@ -38,7 +40,7 @@ const story = computed(() => animalLore.value.find((item) => item.id === storyId
         {{ story.deepStory }}
       </p>
     </header>
-    <ul class="flex-between-center font-small-copy px-4 my-4">
+    <ul class="flex-between-center fredo-p-light gap-6 px-12 my-4">
       <li>{{ story.traits[0] }}</li>
       <li>{{ story.traits[1] }}</li>
       <li>{{ story.traits[2] }}</li>
@@ -48,7 +50,10 @@ const story = computed(() => animalLore.value.find((item) => item.id === storyId
       <img :src="story.images[2]" alt="" />
     </figure>
     <figure class="relative">
-      <button class="black-btn absolute top-5 left-5" @click="cartStore.openModal(story)">
+      <button
+        class="black-btn absolute top-5 left-5"
+        @click="product && cartStore.openModal(product)"
+      >
         Add To Cart
       </button>
       <img :src="story.images[3]" alt="" />

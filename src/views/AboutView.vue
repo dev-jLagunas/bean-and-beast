@@ -26,7 +26,7 @@ const animalLore = computed(() => store.animalLore)
     custom-class="mt-20"
   />
   <section
-    class="grid grid-cols-2 gap-6 mx-4 mt-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 max-w-[1400px] lg:mx-auto"
+    class="grid grid-cols-2 gap-6 mx-4 mt-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 max-w-[1200px] lg:mx-auto"
   >
     <article v-for="animal in animalLore" :key="animal.id" class="">
       <figure class="h-96 mb-20">
