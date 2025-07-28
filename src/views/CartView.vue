@@ -13,6 +13,7 @@ import SectionTitle from '@/components/reusable/SectionTitle.vue'
 
 // Images
 import lemurPeeking from '@/assets/images/section-peek-lemur.png'
+import emptyCart from '@/assets/images/empty-cart.png'
 
 // Step logic
 const currentStep = ref(1)
@@ -55,18 +56,19 @@ const cartItems = computed(() => cartStore.cartItems)
     title="Here is your cart."
     description="Ready to buy?"
     :img="lemurPeeking"
-    custom-class="mt-20"
+    custom-class="mt-5 mb-2"
   />
 
-  <div class="two-btn-wrapper mx-auto">
+  <div class="two-btn-wrapper mx-auto px-4">
     <button class="white-btn">Order History</button>
-    <button class="black-btn">Zip Code: 92021</button>
+    <button class="black-btn">Zip code: 92021</button>
   </div>
 
-  <section class="max-w-[800px] mx-auto px-4 py-8">
+  <section class="max-w-[600px] mx-auto px-4 py-8">
     <!-- Empty Cart State -->
     <div v-if="cartItems.length === 0" class="text-center">
-      <h2 class="fredo-title mb-4">Looks like your cart is empty!</h2>
+      <h2 class="fredo-title">Looks like your cart is empty!</h2>
+      <img :src="emptyCart" alt="empty cart image" class="mx-auto h-96" />
       <RouterLink to="/" class="black-btn">Back to Products</RouterLink>
     </div>
 

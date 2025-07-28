@@ -3,6 +3,8 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useProductStore } from '@/stores/productStore'
+import { useCartStore } from '@/stores/cartStore'
+const cartStore = useCartStore()
 
 // components
 import SectionTitle from '@/components/reusable/SectionTitle.vue'
@@ -46,7 +48,9 @@ const story = computed(() => animalLore.value.find((item) => item.id === storyId
       <img :src="story.images[2]" alt="" />
     </figure>
     <figure class="relative">
-      <button class="black-btn absolute top-5 left-5">Add To Cart</button>
+      <button class="black-btn absolute top-5 left-5" @click="cartStore.openModal(story)">
+        Add To Cart
+      </button>
       <img :src="story.images[3]" alt="" />
     </figure>
     <SeeProductsBtn />

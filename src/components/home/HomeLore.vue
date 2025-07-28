@@ -1,6 +1,10 @@
 <script setup>
 import { useProductStore } from '@/stores/productStore'
 import { computed } from 'vue'
+import { useStoryRedirect } from '@/composables/useStoryRedirect'
+
+// Composables
+const { goToStoryDetails } = useStoryRedirect()
 
 // pinia store
 const store = useProductStore()
@@ -17,8 +21,7 @@ const animalLore = computed(() => store.animalLore)
         <h3 class="fredo-title">{{ animal.animalName }}</h3>
         <p class="font-main-copy">{{ animal.shortLore }}</p>
         <div class="two-btn-wrapper">
-          <button class="white-btn">See Story</button>
-          <button class="black-btn">Add to Cart</button>
+          <button class="white-btn" @click="goToStoryDetails(animal.id)">See Story</button>
         </div>
       </div>
     </article>

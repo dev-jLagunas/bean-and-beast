@@ -186,6 +186,13 @@ Tailwind Custom Reusable Classes
   @apply md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3;
 }
 
+.cart-modal-wrapper {
+  @apply fixed inset-0 bg-dark-main/75 backdrop-blur-sm z-50 flex items-center justify-center;
+}
+
+.cart-modal-content-wrapper {
+  @apply bg-white rounded-sm shadow-lg max-w-xl w-full mx-4 p-6 relative  overflow-y-auto max-h-[90vh];
+}
 /* Tablet Nav */
 .tablet-nav {
   @apply hidden md:flex md:mx-auto;
@@ -223,4 +230,17 @@ Tailwind Custom Reusable Classes
 
 .all-products-btn {
   @apply font-title font-semibold tracking-wider capitalize text-2xl border rounded-sm px-4 py-1 text-dark-main border-muted hover:bg-dark-main hover:text-light-main hover:cursor-pointer transition-all duration-200 ease-in-out;
+}
+
+.modal-close-btn {
+  @apply absolute top-3 right-3 text-3xl text-zebra-red opacity-80 font-bold hover:opacity-100 hover:cursor-pointer;
+}
+
+/* Labels & Inputs */
+.input-label {
+  @apply text-light-main bg-dark-main font-title tracking-wide px-2 w-28 rounded-l-sm text-center;
+}
+
+.input-container {
+  @apply bg-light-muted -z-10 pl-4  rounded-r-sm;
 }

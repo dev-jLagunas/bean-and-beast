@@ -2,6 +2,8 @@
 import { useProductStore } from '@/stores/productStore'
 import { computed } from 'vue'
 import SeeDetailsBtn from '../reusable/SeeDetailsBtn.vue'
+import { useCartStore } from '@/stores/cartStore'
+const cartStore = useCartStore()
 
 // pinia store
 const store = useProductStore()
@@ -34,7 +36,7 @@ const merchandise = computed(() => store.merchandise)
       </figure>
       <div class="two-btn-wrapper">
         <SeeDetailsBtn :productId="merch.id" />
-        <button class="black-btn">Add to Cart</button>
+        <button class="black-btn" @click="cartStore.openModal(merch)">Add to Cart</button>
       </div>
     </article>
   </section>

@@ -190,7 +190,7 @@ const sixBarSet = productsStore.products.find((p) => p.id === 'six-bar-set')
           <h3 class="fredo-title border-b-4" :class="product.borderColorClass">
             {{ product.name }}
           </h3>
-          <p class="font-price">${{ product.price }}</p>
+          <p class="font-price">${{ product.price.toFixed(2) }}</p>
         </div>
         <ul class="flex-between-center mt-2">
           <li class="font-main-copy">{{ product.flavorProfile[0] }}</li>
