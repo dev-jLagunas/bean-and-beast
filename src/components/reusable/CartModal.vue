@@ -104,7 +104,7 @@ function confirmAddToCart() {
       </div>
 
       <!-- Action Buttons -->
-      <div class="mt-8 flex justify-between">
+      <div class="mt-8 flex-center-center gap-4">
         <button
           class="font-small-copy underline underline-offset-2 hover:cursor-pointer"
           @click="closeModal"

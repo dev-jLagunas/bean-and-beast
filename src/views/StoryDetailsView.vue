@@ -40,7 +40,7 @@ import penguinPeeking from '@/assets/images/section-peek-penguin.png'
         {{ story.deepStory }}
       </p>
     </header>
-    <ul class="flex-between-center fredo-p-light gap-6 px-12 my-4">
+    <ul class="flex-center-center space-x-5 fredo-p-light my-4">
       <li>{{ story.traits[0] }}</li>
       <li>{{ story.traits[1] }}</li>
       <li>{{ story.traits[2] }}</li>

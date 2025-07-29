@@ -23,12 +23,12 @@ const merchandise = computed(() => store.merchandise)
       <p class="font-main-copy">{{ merch.description }}</p>
       <figure>
         <figcaption>
-          <ul class="my-2 flex-between-center md:my-4">
-            <li class="font-small-copy flex flex-col">
+          <ul class="my-2 flex-between-center gap-4 md:my-4">
+            <li class="font-small-copy flex flex-col justify-center items-center">
               <i class="fa-solid fa-check text-dark-main"></i>{{ merch.itemDetails[0] }}
             </li>
-            <li class="font-small-copy flex flex-col">
-              <i class="fa-solid fa-check"></i>{{ merch.itemDetails[0] }}
+            <li class="font-small-copy flex flex-col justify-center items-center">
+              <i class="fa-solid fa-check"></i>{{ merch.itemDetails[1] }}
             </li>
           </ul>
         </figcaption>

@@ -66,8 +66,10 @@ import homeLoreCow from '@/assets/images/tablet/home/home-lore-cow.png'
 import miniLogo from '@/assets/images/mini-logo.svg'
 import hoodieDesignA from '@/assets/images/tablet/merch/woman-hoodie-a.webp'
 import hoodieDesignB from '@/assets/images/tablet/merch/woman-hoodie-b.webp'
-import hoodieDesignC from '@/assets/images/tablet/merch/woman-hoodie-c.webp'
 import hoodieDesignD from '@/assets/images/tablet/merch/woman-hoodie-d.webp'
+import cowWallPrint from '@/assets/images/cow-art-frame.webp'
+import lemurWallPrint from '@/assets/images/lemur-art-frame.webp'
+import zebraWallPrint from '@/assets/images/zebra-art-frame.webp'
 
 // ***** ABOUT PAGE IMAGES ******
 import zebraGif from '@/assets/images/tablet/about/zebra-gif.gif'
@@ -252,7 +254,7 @@ export const useProductStore = defineStore('product', {
       {
         id: 'three-bar-set',
         name: 'Three Bar Set',
-        flavor: 'Any three flavors to match your mood, vibe, or gift intention.',
+        flavor: 'Any three flavors to match your mood or vibe.',
         description: 'A vibrant trio of bars capturing the full flavor spectrum of Bean & Beast.',
         price: 24,
         category: 'set',
@@ -434,87 +436,134 @@ export const useProductStore = defineStore('product', {
       },
       {
         id: 'hoodie-b',
-        name: 'Bean And Beast Black Hoodie',
-        flavor: 'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        name: 'Zebra Character Hoodie',
+        flavor: 'A bold silhouette in motion. Feels like wearable strength, balance, and contrast.',
         description:
-          'Our signature hoodie brings bold color and quiet strength to every day comfort',
+          'Our signature zebra print, wrapped in color and calm. Designed for quiet confidence.',
         price: 45,
         category: 'merch',
-
         borderColorClass: 'border-b-zebra-cyan',
         storeLogo: miniLogo,
-        flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
+        flavorProfile: [
+          'Graphic contrast',
+          'Soft strength',
+          'Understated power',
+          'Effortless cool',
+        ],
         characterProfile: [
-          'Striking personality',
-          'Confident vibe',
-          'Elegantly wild',
-          'Unapologetically bold',
+          'Visually bold',
+          'Measured presence',
+          'Gracefully strong',
+          'Minimalist edge',
         ],
         itemDetails: [
-          'soft, breathable cotton-blend fleece',
-          'Graphic print, signature color bars',
-          'Balanced with light vanilla undertones',
-          'Pairs well with espresso or cabernet',
+          'Midweight cotton-blend fleece for year-round comfort',
+          'Front print featuring The Zebra and Japanese typography',
+          'Double-lined hood with matching drawstrings',
+          'A wearable tribute to clarity and contrast',
         ],
         recommendText:
-          'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
+          'For those who lead with calm clarity — a perfect blend of edge and elegance.',
         images: [hoodieDesignB],
       },
+
       {
         id: 'hoodie-c',
-        name: 'Bean And Beast Hoodie',
-        flavor: 'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        name: 'Full Cast Hoodie',
+        flavor:
+          'All six beasts in one bold print. A wearable celebration of character and contrast.',
         description:
-          'Our signature hoodie brings bold color and quiet strength to every day comfort',
-        price: 45,
+          'The complete Bean & Beast lineup. Playful, elegant, and unapologetically expressive.',
+        price: 52,
         category: 'merch',
-
-        borderColorClass: 'border-b-zebra-cyan',
+        borderColorClass: 'border-b-penguin-sky',
         storeLogo: miniLogo,
-        flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
-        characterProfile: [
-          'Striking personality',
-          'Confident vibe',
-          'Elegantly wild',
-          'Unapologetically bold',
-        ],
+        flavorProfile: ['Color-packed', 'Character-rich', 'Balanced energy', 'Statement piece'],
+        characterProfile: ['Expressive', 'Collectible', 'Boldly unified', 'Spirit-forward'],
         itemDetails: [
-          'soft, breathable cotton-blend fleece',
-          'Graphic print, signature color bars',
-          'Balanced with light vanilla undertones',
-          'Pairs well with espresso or cabernet',
+          'Premium cotton-blend hoodie in soft fog gray',
+          'Front graphic featuring all six character cards',
+          'Double-stitched details and kangaroo pocket',
+          'Made for fans of the full Bean & Beast universe',
         ],
         recommendText:
-          'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [hoodieDesignC],
+          'For the design-lover who wants it all — a bold celebration of every beast in the collection.',
+        images: [hoodieDesignD],
       },
       {
-        id: 'hoodie-d',
-        name: 'Bean And Beast Art Hoodie',
-        flavor: 'Our signature hoodie brings bold color and quiet strength to every day comfort',
+        id: 'print-cow',
+        name: 'Cow Character Print',
+        flavor: 'Gentle strength meets bold shape — a tribute to calm, grounded elegance.',
         description:
-          'Our signature hoodie brings bold color and quiet strength to every day comfort',
-        price: 50,
+          'A framed art print capturing the nurturing spirit and quiet power of The Cow.',
+        price: 38,
         category: 'merch',
-
-        borderColorClass: 'border-b-zebra-cyan',
+        borderColorClass: 'border-b-cow-red',
         storeLogo: miniLogo,
-        flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
+        flavorProfile: ['Soft contrast', 'Earthy calm', 'Visual warmth', 'Framed serenity'],
         characterProfile: [
-          'Striking personality',
-          'Confident vibe',
-          'Elegantly wild',
-          'Unapologetically bold',
+          'Gentle strength',
+          'Nurturing presence',
+          'Grounded soul',
+          'Understated boldness',
         ],
         itemDetails: [
-          'soft, breathable cotton-blend fleece',
-          'Graphic print, signature color bars',
-          'Balanced with light vanilla undertones',
-          'Pairs well with espresso or cabernet',
+          'Museum-quality print on archival matte paper',
+          'Includes a black frame with protective clear acrylic',
+          'Features The Cow silhouette and soft abstract motifs',
+          'Ready to hang — adds story and warmth to any room',
         ],
         recommendText:
-          'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [hoodieDesignD],
+          'Perfect for calm creatives, slow-living fans, or anyone drawn to soft, meaningful design.',
+        images: [cowWallPrint],
+      },
+      {
+        id: 'print-lemur',
+        name: 'Lemur Character Print',
+        flavor: 'Bright curiosity and playful rhythm in bold, minimal form.',
+        description:
+          'A framed print that captures The Lemur’s spirited energy and instinctive charm.',
+        price: 38,
+        category: 'merch',
+        borderColorClass: 'border-b-lemur-orange',
+        storeLogo: miniLogo,
+        flavorProfile: ['Light motion', 'Tropical pop', 'Balanced energy', 'Playful clarity'],
+        characterProfile: [
+          'Curious thinker',
+          'Instinctive mover',
+          'Social spark',
+          'Joyfully sharp',
+        ],
+        itemDetails: [
+          'Framed print featuring The Lemur’s silhouette and vibrant abstract design',
+          'Printed on archival-quality matte paper',
+          'Includes black frame and clear acrylic front',
+          'Great for creative spaces or playful interiors',
+        ],
+        recommendText:
+          'For free spirits, curious minds, and color lovers who want their walls to feel alive.',
+        images: [lemurWallPrint],
+      },
+      {
+        id: 'print-zebra',
+        name: 'Zebra Character Print',
+        flavor: 'Visual clarity and bold contrast, captured in timeless form.',
+        description: 'A striking framed print of The Zebra. Poised, powerful, and always distinct.',
+        price: 38,
+        category: 'merch',
+        borderColorClass: 'border-b-zebra-cyan',
+        storeLogo: miniLogo,
+        flavorProfile: ['High contrast', 'Sharp edge', 'Visual poise', 'Signature tone'],
+        characterProfile: ['Bold leader', 'Measured mind', 'Graceful defiance', 'Composed clarity'],
+        itemDetails: [
+          'Minimalist design featuring The Zebra’s iconic silhouette',
+          'Printed on museum-grade paper with fade-resistant ink',
+          'Black frame and acrylic glazing included',
+          'Perfect centerpiece for clean, expressive interiors',
+        ],
+        recommendText:
+          'Ideal for lovers of contrast, clarity, and thoughtful design. A daily dose of bold balance.',
+        images: [zebraWallPrint],
       },
     ],
   }),

@@ -3,6 +3,8 @@ import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useProductStore } from '@/stores/productStore'
+import { useCartStore } from '@/stores/cartStore'
+const cartStore = useCartStore()
 
 // Access route param
 const router = useRouter()
@@ -67,8 +69,7 @@ function goBack() {
           <button @click="goBack" aria-label="Go back" class="hover:cursor-pointer">
             <i class="fa-solid fa-arrow-left"></i>
           </button>
-          <button class="white-btn">See Lore</button>
-          <button class="black-btn">Add To Cart</button>
+          <button class="black-btn" @click="cartStore.openModal(product)">Add To Cart</button>
         </div>
       </article>
     </section>
