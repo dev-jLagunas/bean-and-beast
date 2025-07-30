@@ -2,11 +2,11 @@
 
 **Live Site**: [Bean & Beast](https://dev-jlagunas.github.io/bean-and-beast/#/)
 
-Bean & Beast is a fictional premium chocolate brand built as the capstone project of my UX design portfolio. This full product concept was created entirely from scratch using the design thinking framework — from user research, branding, and product storytelling, to high-fidelity wireframes, UI mockups, and frontend development.
+Bean & Beast is a fictional premium chocolate brand built as the capstone project of my UX design portfolio. This full product concept was created entirely from scratch using the design thinking framework, from user research, branding, and product storytelling, to high-fidelity wireframes, UI mockups, and frontend development.
 
 The site was built using Vue 3, JavaScript, and styled with Tailwind CSS. I placed special emphasis on accessibility, skimmability, and reusable UI components. The site is structured with clean logic, modular components, and a centralized data store.
 
-Bean & Beast is more than a design project — it’s a fully imagined brand with character-driven storytelling and original artwork. I built it to prove that I am ready to work professionally as a UX designer and front-end developer.
+Bean & Beast is more than a design project. It’s a fully imagined brand with character-driven storytelling and original artwork. I built it to prove that I am ready to work professionally as a UX designer and front-end developer.
 
 ---
 
