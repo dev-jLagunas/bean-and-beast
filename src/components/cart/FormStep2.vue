@@ -23,6 +23,8 @@ const createAccount = ref(false)
           <input
             id="firstName"
             v-model="firstName"
+            required
+            type="text"
             placeholder="e.g. John"
             class="w-3/4 bg-light-muted rounded-r-sm pl-2 md:w-5/6"
           />
@@ -32,6 +34,8 @@ const createAccount = ref(false)
           <input
             id="lastName"
             v-model="lastName"
+            required
+            type="text"
             placeholder="e.g. Smith"
             class="w-3/4 bg-light-muted rounded-r-sm pl-2 md:w-5/6"
           />
@@ -45,6 +49,7 @@ const createAccount = ref(false)
           <input
             id="address"
             v-model="address"
+            required
             placeholder="e.g. 123 Apple St"
             class="w-3/4 bg-light-muted rounded-r-sm pl-2 md:w-full"
           />
@@ -61,6 +66,7 @@ const createAccount = ref(false)
             <input
               id="state"
               v-model="state"
+              required
               class="bg-light-muted w-full rounded-r-sm pl-2"
               placeholder="e.g. California"
             />
@@ -69,7 +75,7 @@ const createAccount = ref(false)
             <label for="zip" class="bg-dark-main text-light-main px-2 rounded-l-sm tracking-wide"
               >Zip</label
             >
-            <input id="zip" v-model="zip" class="bg-light-muted w-full rounded-r-sm" />
+            <input id="zip" v-model="zip" required class="bg-light-muted w-full rounded-r-sm" />
           </div>
         </div>
 
@@ -83,6 +89,7 @@ const createAccount = ref(false)
           <input
             id="email"
             v-model="email"
+            required
             class="input-container w-full"
             placeholder="e.g. john-smith@example.com"
           />

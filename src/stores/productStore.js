@@ -9,6 +9,7 @@ import pandaLogo from '@/assets/images/panda-logo-reg.webp'
 import cowLogo from '@/assets/images/cow-logo-reg.webp'
 import lemurLogo from '@/assets/images/lemur-logo-reg.webp'
 import chocoLogo from '@/assets/images/choco-logo.png'
+import squareLogo from '@/assets/images/square-logo-reg.svg'
 
 // *****SINGLE ITEM IMAGES******
 import zebraSingleColor from '@/assets/images/tablet/home/zebra-single-md.webp'
@@ -417,6 +418,7 @@ export const useProductStore = defineStore('product', {
         category: 'merch',
         borderColorClass: 'border-b-zebra-cyan',
         storeLogo: miniLogo,
+        characterLogo: squareLogo,
         flavorProfile: ['Dark & creamy', 'Subtle bitterness', 'Roasted depth', 'Smooth finish'],
         characterProfile: [
           'Striking personality',
@@ -432,7 +434,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Chosen for its bold contrast and smooth intensity — perfect for classic dark chocolate lovers.',
-        images: [hoodieDesignA],
+        images: [hoodieDesignA, hoodieDesignA, miniLogo],
       },
       {
         id: 'hoodie-b',
@@ -444,6 +446,7 @@ export const useProductStore = defineStore('product', {
         category: 'merch',
         borderColorClass: 'border-b-zebra-cyan',
         storeLogo: miniLogo,
+        characterLogo: squareLogo,
         flavorProfile: [
           'Graphic contrast',
           'Soft strength',
@@ -464,7 +467,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'For those who lead with calm clarity — a perfect blend of edge and elegance.',
-        images: [hoodieDesignB],
+        images: [hoodieDesignB, hoodieDesignB],
       },
 
       {
@@ -478,6 +481,7 @@ export const useProductStore = defineStore('product', {
         category: 'merch',
         borderColorClass: 'border-b-penguin-sky',
         storeLogo: miniLogo,
+        characterLogo: squareLogo,
         flavorProfile: ['Color-packed', 'Character-rich', 'Balanced energy', 'Statement piece'],
         characterProfile: ['Expressive', 'Collectible', 'Boldly unified', 'Spirit-forward'],
         itemDetails: [
@@ -488,7 +492,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'For the design-lover who wants it all — a bold celebration of every beast in the collection.',
-        images: [hoodieDesignD],
+        images: [hoodieDesignD, hoodieDesignD],
       },
       {
         id: 'print-cow',
@@ -500,6 +504,7 @@ export const useProductStore = defineStore('product', {
         category: 'merch',
         borderColorClass: 'border-b-cow-red',
         storeLogo: miniLogo,
+        characterLogo: squareLogo,
         flavorProfile: ['Soft contrast', 'Earthy calm', 'Visual warmth', 'Framed serenity'],
         characterProfile: [
           'Gentle strength',
@@ -515,7 +520,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Perfect for calm creatives, slow-living fans, or anyone drawn to soft, meaningful design.',
-        images: [cowWallPrint],
+        images: [cowWallPrint, cowWallPrint],
       },
       {
         id: 'print-lemur',
@@ -527,6 +532,7 @@ export const useProductStore = defineStore('product', {
         category: 'merch',
         borderColorClass: 'border-b-lemur-orange',
         storeLogo: miniLogo,
+        characterLogo: squareLogo,
         flavorProfile: ['Light motion', 'Tropical pop', 'Balanced energy', 'Playful clarity'],
         characterProfile: [
           'Curious thinker',
@@ -542,7 +548,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'For free spirits, curious minds, and color lovers who want their walls to feel alive.',
-        images: [lemurWallPrint],
+        images: [lemurWallPrint, lemurWallPrint],
       },
       {
         id: 'print-zebra',
@@ -553,6 +559,7 @@ export const useProductStore = defineStore('product', {
         category: 'merch',
         borderColorClass: 'border-b-zebra-cyan',
         storeLogo: miniLogo,
+        characterLogo: squareLogo,
         flavorProfile: ['High contrast', 'Sharp edge', 'Visual poise', 'Signature tone'],
         characterProfile: ['Bold leader', 'Measured mind', 'Graceful defiance', 'Composed clarity'],
         itemDetails: [
@@ -563,7 +570,7 @@ export const useProductStore = defineStore('product', {
         ],
         recommendText:
           'Ideal for lovers of contrast, clarity, and thoughtful design. A daily dose of bold balance.',
-        images: [zebraWallPrint],
+        images: [zebraWallPrint, zebraWallPrint],
       },
     ],
   }),

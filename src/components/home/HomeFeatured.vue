@@ -22,7 +22,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="gap-8 grid-two-four">
+  <section class="gap-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
     <article v-for="product in products" :key="product.id" class="mx-4">
       <figure class="h-24 mt-4 w-fit text-left">
         <img
